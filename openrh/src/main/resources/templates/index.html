@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="utf-8">
@@ -171,15 +171,15 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" th:src="@{img/avatar-mini.jpg}"></span>
-                                    <span class="subject">
-                                    <span class="from">Greg  Martin</span>
-                                    <span class="time">1 min</span>
-                                    </span>
-                                    <span class="message">
-                                        I really like this admin panel.
-                                    </span>
-                                </a>
+                  <span class="photo"><img alt="avatar" th:src="@{img/avatar-mini.jpg}"></span>
+                  <span class="subject">
+                  <span class="from">Greg  Martin</span>
+                  <span class="time">1 min</span>
+                  </span>
+                  <span class="message">
+                      I really like this admin panel.
+                  </span>
+                </a>
               </li>
               <li>
                 <a href="#">
@@ -545,7 +545,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img th:src="@{img/India.png}" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/India.png}" style="height:18px; margin-top:-2px;" alt=""></td>
                       <td>India</td>
                       <td>3652</td>
                       <td>2563</td>
