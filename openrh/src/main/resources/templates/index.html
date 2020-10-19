@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8">
@@ -7,34 +7,34 @@
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" th:href="@{/img/favicon.png}">
 
-  <title>Creative - Bootstrap Admin Template</title>
+  <title>GRH OUMAR</title>
 
   <!-- Bootstrap CSS -->
-  <link th:href="@{css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <link th:href="@{/css/bootstrap.min.css}"  rel="stylesheet">
   <!-- bootstrap theme -->
-  <link th:href="@{css/bootstrap.theme.css}" href="../static/css/bootstrap-theme.css" rel="stylesheet">
+  <link th:href="@{/css/bootstrap.theme.css}"  rel="stylesheet">
   <!--external css-->
   <!-- font icon -->
 
-  <link th:href="@{css/elegant-icons-style.css}" href="../static/css/elegant-icons-style.css" rel="stylesheet" />
-  <link th:href="@{css/font-awesome.min.css}" href="../static/css/font-awesome.min.css" rel="stylesheet" />
+  <link th:href="@{/css/elegant-icons-style.css}"  rel="stylesheet" />
+  <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
   <!-- full calendar css-->
-  <link th:href="@{fullcalendar/bootstrap-fullcalendar.css}" href="../static/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-  <link th:href="@{fullcalendar/fullcalendar.css}" href="../static/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+  <link th:href="@{/fullcalendar/bootstrap-fullcalendar.css}"  rel="stylesheet" />
+  <link th:href="@{/fullcalendar/fullcalendar.css}"  rel="stylesheet" />
   <!-- easy pie chart-->
-  <link th:href="@{jquery-easy-pie-chart/jquery.easy-pie-chart.css}" href="../static/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+  <link th:href="@{/jquery-easy-pie-chart/jquery.easy-pie-chart.css}"  rel="stylesheet" type="text/css" media="screen" />
   <!-- owl carousel -->
-  <link rel="stylesheet" th:href="@{css/owl.carousel.css}" href="../static/css/owl.carousel.css" type="text/css">
-  <link th:href="@{css/jquery-jvectormap-1.2.2.css}" href="../static/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/owl.carousel.css}"  type="text/css">
+  <link th:href="@{/css/jquery-jvectormap-1.2.2.css}"  rel="stylesheet">
   <!-- Custom styles -->
-  <link rel="stylesheet" th:href="@{css/fullcalendar.css}" href="../static/css/fullcalendar.css">
-  <link th:href="@{css/widgets.css}" href="../static/css/widgets.css" rel="stylesheet">
-  <link th:href="@{css/style.css}" href="../static/css/style.css" rel="stylesheet">
-  <link th:href="@{style-responsive.css}" href="../static/css/style-responsive.css" rel="stylesheet" />
-  <link th:href="@{css/xcharts.min.css}" href="../static/css/xcharts.min.css" rel=" stylesheet">
-  <link th:href="@{css/jquery-ui-1.10.4.min.css}" href="../static/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{css/fullcalendar.css}" >
+  <link th:href="@{/css/widgets.css}"  rel="stylesheet">
+  <link th:href="@{/css/style.css}"  rel="stylesheet">
+  <link th:href="@{/css/style-responsive.css}"  rel="stylesheet" />
+  <link th:href="@{css/xcharts.min.css}"  rel=" stylesheet">
+  <link th:href="@{css/jquery-ui-1.10.4.min.css}"  rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
     Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -171,7 +171,7 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../../../../../../Desktop/OpenAdmin/img/avatar-mini.jpg"></span>
+                                    <span class="photo"><img alt="avatar" th:src="@{img/avatar-mini.jpg}"></span>
                                     <span class="subject">
                                     <span class="from">Greg  Martin</span>
                                     <span class="time">1 min</span>
@@ -183,7 +183,7 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../../../../../../Desktop/OpenAdmin/img/avatar-mini2.jpg"></span>
+                                    <span class="photo"><img alt="avatar" th:src="@{img/avatar-mini2.jpg}"></span>
                                     <span class="subject">
                                     <span class="from">Bob   Mckenzie</span>
                                     <span class="time">5 mins</span>
@@ -195,7 +195,7 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../../../../../../Desktop/OpenAdmin/img/avatar-mini3.jpg"></span>
+                                    <span class="photo"><img alt="avatar" th:src="@{img/avatar-mini3.jpg}"></span>
                                     <span class="subject">
                                     <span class="from">Phillip   Park</span>
                                     <span class="time">2 hrs</span>
@@ -207,7 +207,7 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../../../../../../Desktop/OpenAdmin/img/avatar-mini4.jpg"></span>
+                                    <span class="photo"><img alt="avatar" th:src="@{img/avatar-mini4.jpg}"></span>
                                     <span class="subject">
                                     <span class="from">Ray   Munoz</span>
                                     <span class="time">1 day</span>
@@ -237,31 +237,31 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="label label-primary"><i class="icon_profile"></i></span>
-                                    Friend Request
-                                    <span class="small italic pull-right">5 mins</span>
-                                </a>
+                  <span class="label label-primary"><i class="icon_profile"></i></span>
+                  Friend Request
+                  <span class="small italic pull-right">5 mins</span>
+                </a>
               </li>
               <li>
                 <a href="#">
-                                    <span class="label label-warning"><i class="icon_pin"></i></span>
-                                    John location.
-                                    <span class="small italic pull-right">50 mins</span>
-                                </a>
+                  <span class="label label-warning"><i class="icon_pin"></i></span>
+                  John location.
+                  <span class="small italic pull-right">50 mins</span>
+                </a>
               </li>
               <li>
                 <a href="#">
-                                    <span class="label label-danger"><i class="icon_book_alt"></i></span>
-                                    Project 3 Completed.
-                                    <span class="small italic pull-right">1 hr</span>
-                                </a>
+                  <span class="label label-danger"><i class="icon_book_alt"></i></span>
+                  Project 3 Completed.
+                  <span class="small italic pull-right">1 hr</span>
+                </a>
               </li>
               <li>
                 <a href="#">
-                                    <span class="label label-success"><i class="icon_like"></i></span>
-                                    Mick appreciated your work.
-                                    <span class="small italic pull-right"> Today</span>
-                                </a>
+                  <span class="label label-success"><i class="icon_like"></i></span>
+                  Mick appreciated your work.
+                  <span class="small italic pull-right"> Today</span>
+                </a>
               </li>
               <li>
                 <a href="#">See all notifications</a>
@@ -272,12 +272,12 @@
           <!-- user login dropdown start-->
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="profile-ava">
-                                <img alt="" src="../../../../../../Desktop/OpenAdmin/img/avatar1_small.jpg">
-                            </span>
-                            <span class="username">Jenifer Smith</span>
-                            <b class="caret"></b>
-                        </a>
+              <span class="profile-ava">
+                  <img alt="" th:src="@{img/avatar1_small.jpg}">
+              </span>
+              <span class="username">Jenifer Smith</span>
+              <b class="caret"></b>
+            </a>
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
@@ -317,16 +317,16 @@
         <ul class="sidebar-menu">
           <li class="active">
             <a class="" href="index.html">
-                          <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
-                      </a>
+              <i class="icon_house_alt"></i>
+              <span>Dashboard</span>
+            </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="icon_document_alt"></i>
+              <span>Forms</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" href="form_component.html">Form Elements</a></li>
               <li><a class="" href="form_validation.html">Form Validation</a></li>
@@ -334,10 +334,10 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="icon_desktop"></i>
+              <span>UI Fitures</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" href="general.html">Elements</a></li>
               <li><a class="" href="buttons.html">Buttons</a></li>
@@ -346,25 +346,25 @@
           </li>
           <li>
             <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
-                      </a>
+              <i class="icon_genius"></i>
+              <span>Widgets</span>
+            </a>
           </li>
           <li>
             <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
+              <i class="icon_piechart"></i>
+              <span>Charts</span>
 
-                      </a>
+            </a>
 
           </li>
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="icon_table"></i>
+              <span>Tables</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" href="basic_table.html">Basic Table</a></li>
             </ul>
@@ -372,10 +372,10 @@
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="icon_documents_alt"></i>
+              <span>Pages</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" href="profile.html">Profile</a></li>
               <li><a class="" href="login.html"><span>Login Page</span></a></li>
@@ -530,7 +530,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/Germany.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/Germany.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>Germany</td>
                       <td>2563</td>
                       <td>1025</td>
@@ -545,7 +545,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/India.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/India.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>India</td>
                       <td>3652</td>
                       <td>2563</td>
@@ -560,7 +560,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/Spain.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/Spain.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>Spain</td>
                       <td>562</td>
                       <td>452</td>
@@ -575,7 +575,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/India.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/India.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>Russia</td>
                       <td>1258</td>
                       <td>958</td>
@@ -590,7 +590,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/Spain.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/Spain.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>USA</td>
                       <td>4856</td>
                       <td>3621</td>
@@ -605,7 +605,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/Germany.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/Germany.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>Brazil</td>
                       <td>265</td>
                       <td>102</td>
@@ -620,7 +620,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/Germany.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/Germany.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>Coloumbia</td>
                       <td>265</td>
                       <td>102</td>
@@ -635,7 +635,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><img src="../../../../../../Desktop/OpenAdmin/img/Germany.png" style="height:18px; margin-top:-2px;"></td>
+                      <td><img th:src="@{img/Germany.png}" style="height:18px; margin-top:-2px;"></td>
                       <td>France</td>
                       <td>265</td>
                       <td>102</td>
@@ -746,7 +746,7 @@
                     <li class="by-me">
                       <!-- Use the class "pull-left" in avatar -->
                       <div class="avatar pull-left">
-                        <img src="../../../../../../Desktop/OpenAdmin/img/user.jpg" alt="" />
+                        <img th:src="@{img/user.jpg}" alt="" />
                       </div>
 
                       <div class="chat-content">
@@ -761,7 +761,7 @@
                     <li class="by-other">
                       <!-- Use the class "pull-right" in avatar -->
                       <div class="avatar pull-right">
-                        <img src="../../../../../../Desktop/OpenAdmin/img/user22.png" alt="" />
+                        <img th:src="@{img/user22.png}" alt="" />
                       </div>
 
                       <div class="chat-content">
@@ -774,7 +774,7 @@
 
                     <li class="by-me">
                       <div class="avatar pull-left">
-                        <img src="../../../../../../Desktop/OpenAdmin/img/user.jpg" alt="" />
+                        <img th:src="@{img/user.jpg}" alt="" />
                       </div>
 
                       <div class="chat-content">
@@ -787,7 +787,7 @@
                     <li class="by-other">
                       <!-- Use the class "pull-right" in avatar -->
                       <div class="avatar pull-right">
-                        <img src="../../../../../../Desktop/OpenAdmin/img/user22.png" alt="" />
+                        <img th:src="@{img/user22.png}" alt="" />
                       </div>
 
                       <div class="chat-content">
@@ -829,9 +829,9 @@
                   </div>
                   <div class="col-lg-4">
                     <span class="profile-ava pull-right">
-                                        <img alt="" class="simple" src="../../../../../../Desktop/OpenAdmin/img/avatar1_small.jpg">
-                                        Jenifer smith
-                                </span>
+                      <img alt="" class="simple" th:src="@{img/avatar1_small.jpg}">
+                      Jenifer smith
+                    </span>
                   </div>
                 </div>
               </div>
@@ -847,7 +847,7 @@
                     </td>
                     <td>
                       <span class="profile-ava">
-                                        <img alt="" class="simple" src="../../../../../../Desktop/OpenAdmin/img/avatar1_small.jpg">
+                                        <img alt="" class="simple" th:src="@{img/avatar1_small.jpg}">
                                     </span>
                     </td>
                   </tr>
@@ -885,7 +885,7 @@
                     </td>
                     <td>
                       <span class="profile-ava">
-                                        <img alt="" class="simple" src="../../../../../../Desktop/OpenAdmin/img/avatar1_small.jpg">
+                                        <img alt="" class="simple" th:src="@{img/avatar1_small.jpg}">
                                       </span>
                     </td>
                   </tr>
@@ -935,7 +935,7 @@
                     </td>
                     <td>
                       <span class="profile-ava">
-                                        <img alt="" class="simple" src="../../../../../../Desktop/OpenAdmin/img/avatar1_small.jpg">
+                                        <img alt="" class="simple" th:src="@{img/avatar1_small.jpg}">
                                       </span>
                     </td>
                   </tr>
@@ -1003,12 +1003,12 @@
                         <label class="control-label col-lg-2">Category</label>
                         <div class="col-lg-10">
                           <select class="form-control">
-                                                  <option value="">- Choose Cateogry -</option>
-                                                  <option value="1">General</option>
-                                                  <option value="2">News</option>
-                                                  <option value="3">Media</option>
-                                                  <option value="4">Funny</option>
-                                                </select>
+                            <option value="">- Choose Cateogry -</option>
+                            <option value="1">General</option>
+                            <option value="2">News</option>
+                            <option value="3">Media</option>
+                            <option value="4">Funny</option>
+                          </select>
                         </div>
                       </div>
                       <!-- Tags -->
@@ -1062,46 +1062,46 @@
   <!-- container section start -->
 
   <!-- javascripts -->
-  <script src="../../../../../../Desktop/OpenAdmin/js/jquery.js"></script>
-  <script src="../../../../../../Desktop/OpenAdmin/js/jquery-ui-1.10.4.min.js"></script>
-  <script src="../../../../../../Desktop/OpenAdmin/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../../../../Desktop/OpenAdmin/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script th:src="@{/js/jquery.js}"></script>
+  <script th:src="@{/js/jquery-ui-1.10.4.min.js}"></script>
+  <script th:src="@{/js/jquery-1.8.3.min.js}"></script>
+  <script type="text/javascript" th:src="@{/js/jquery-ui-1.9.2.custom.min.js}"></script>
   <!-- bootstrap -->
-  <script src="../../../../../../Desktop/OpenAdmin/js/bootstrap.min.js"></script>
+  <script th:src="@{/js/bootstrap.min.js}"></script>
   <!-- nice scroll -->
-  <script src="../../../../../../Desktop/OpenAdmin/js/jquery.scrollTo.min.js"></script>
-  <script src="../../../../../../Desktop/OpenAdmin/js/jquery.nicescroll.js" type="text/javascript"></script>
+  <script th:src="@{/js/jquery.scrollTo.min.js}"></script>
+  <script th:src="@{/js/jquery.nicescroll.js}" type="text/javascript"></script>
   <!-- charts scripts -->
-  <script src="../../../../../../Desktop/OpenAdmin/assets/jquery-knob/js/jquery.knob.js"></script>
-  <script src="../../../../../../Desktop/OpenAdmin/js/jquery.sparkline.js" type="text/javascript"></script>
-  <script src="../../../../../../Desktop/OpenAdmin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-  <script src="../../../../../../Desktop/OpenAdmin/js/owl.carousel.js"></script>
+  <script th:src="@{/assets/jquery-knob/js/jquery.knob.js}"></script>
+  <script th:src="@{/js/jquery.sparkline.js}" type="text/javascript"></script>
+  <script th:src="@{/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js}"></script>
+  <script th:src="@{/js/owl.carousel.js}"></script>
   <!-- jQuery full calendar -->
-  <<script src="../../../../../../Desktop/OpenAdmin/js/fullcalendar.min.js"></script>
+  <<script th:src="@{/js/fullcalendar.min.js}"></script>
     <!-- Full Google Calendar - Calendar -->
-    <script src="../../../../../../Desktop/OpenAdmin/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <script th:src="@{/assets/fullcalendar/fullcalendar/fullcalendar.js}"></script>
     <!--script for this page only-->
-    <script src="../../../../../../Desktop/OpenAdmin/js/calendar-custom.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery.rateit.min.js"></script>
+    <script th:src="@{/js/calendar-custom.js}"></script>
+    <script th:src="@{/js/jquery.rateit.min.js}"></script>
     <!-- custom select -->
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery.customSelect.min.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/assets/chart-master/Chart.js"></script>
+    <script th:src="@{/js/jquery.customSelect.min.js}"></script>
+    <script th:src="@{/assets/chart-master/Chart.js}"></script>
 
     <!--custome script for all page-->
-    <script src="../../../../../../Desktop/OpenAdmin/js/scripts.js"></script>
+    <script th:src="@{/js/scripts.js}"></script>
     <!-- custom script for this page-->
-    <script src="../../../../../../Desktop/OpenAdmin/js/sparkline-chart.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/easy-pie-chart.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/xcharts.min.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery.autosize.min.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery.placeholder.min.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/gdp-data.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/morris.min.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/sparklines.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/charts.js"></script>
-    <script src="../../../../../../Desktop/OpenAdmin/js/jquery.slimscroll.min.js"></script>
+    <script th:src="@{/js/sparkline-chart.js}"></script>
+    <script th:src="@{/js/easy-pie-chart.js}"></script>
+    <script th:src="@{/js/jquery-jvectormap-1.2.2.min.js}"></script>
+    <script th:src="@{/js/jquery-jvectormap-world-mill-en.js}"></script>
+    <script th:src="@{/js/xcharts.min.js}"></script>
+    <script th:src="@{/js/jquery.autosize.min.js}"></script>
+    <script th:src="@{/js/jquery.placeholder.min.js}"></script>
+    <script th:src="@{/js/gdp-data.js}"></script>
+    <script th:src="@{/js/morris.min.js}"></script>
+    <script th:src="@{/js/sparklines.js}"></script>
+    <script th:src="@{/js/charts.js}"></script>
+    <script th:src="@{/js/jquery.slimscroll.min.js}"></script>
     <script>
       //knob
       $(function() {
