@@ -12,7 +12,7 @@ public class OpenRhApplication {
 	}
 	@GetMapping
 	public String index(){
-		return "blank";
+		return "index";
 	}
 
 }
