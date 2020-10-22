@@ -25,7 +25,6 @@ public class Employe {
     @ManyToOne
     @JoinColumn(name = "id_genre",insertable = false,updatable = false)
     private Genre genre;
-    private int id_genre;
 
     private String nom;
     private String prenom;
@@ -35,7 +34,6 @@ public class Employe {
     private Date date_naiss;
 
     private String adresse;
-    private String pays_naiss;
     private String ville_naiss;
     private String numero;
     private String email;
@@ -44,8 +42,12 @@ public class Employe {
     private String piece_jointe;
     private String role;
 
+
+    @ManyToOne
+    @JoinColumn(name = "id_pays",insertable = false,updatable = false)
+    private Pays pays;
+
     @ManyToOne
     @JoinColumn(name = "id_sit",insertable = false,updatable = false)
     private SituationMatri situationMatri;
-    private String id_sit;
 }
