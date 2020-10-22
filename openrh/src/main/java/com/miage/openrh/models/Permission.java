@@ -18,7 +18,7 @@ import java.util.Date;
 public class Permission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_type_perm")
+    @Column(name="id_perm")
     private String mat_emp;
 
     @ManyToOne
