@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -18,9 +20,18 @@ public class Permission {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_type_perm")
     private String mat_emp;
+
+    @ManyToOne
+    @JoinColumn(name = "id_type_perm",insertable = false,updatable = false)
+    private TypePermission typePermission;
     private int id_type_perm;
-    private String date_depart;
-    private String date_demande;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date date_depart;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date date_demande;
+
     private int duree;
     private String motif;
 }
