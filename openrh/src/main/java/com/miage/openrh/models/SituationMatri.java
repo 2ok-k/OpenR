@@ -19,6 +19,6 @@ import javax.persistence.Id;
 public class SituationMatri {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_sit;
+    private Integer id_sit;
     private String lib_sit;
 }

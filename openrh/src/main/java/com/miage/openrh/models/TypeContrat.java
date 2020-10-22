@@ -19,6 +19,6 @@ import javax.persistence.Id;
 public class TypeContrat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_type_contrat;
+    private Integer id_type_contrat;
     private String lib_contrat;
 }

@@ -20,6 +20,7 @@ public class Permission {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_perm")
     private String mat_emp;
+    private Integer num;
 
     @ManyToOne
     @JoinColumn(name = "id_type_perm",insertable = false,updatable = false)

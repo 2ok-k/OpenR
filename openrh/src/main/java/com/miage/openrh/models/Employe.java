@@ -20,6 +20,8 @@ public class Employe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="mat_emp")
 
+    private String mat_emp;
+
     @ManyToOne
     @JoinColumn(name = "id_genre",insertable = false,updatable = false)
     private Genre genre;

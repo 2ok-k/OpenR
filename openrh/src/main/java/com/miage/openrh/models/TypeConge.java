@@ -19,6 +19,6 @@ import javax.persistence.Id;
 public class TypeConge {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_type_conge;
+    private Integer id_type_conge;
     private String lib_conge;
 }

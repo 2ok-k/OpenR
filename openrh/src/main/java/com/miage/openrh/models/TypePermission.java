@@ -19,6 +19,6 @@ import javax.persistence.Id;
 public class TypePermission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_type_perm;
+    private Integer id_type_perm;
     private String lib_perm;
 }

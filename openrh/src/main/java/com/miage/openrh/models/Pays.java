@@ -20,6 +20,6 @@ public class Pays {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_pays;
+    private Integer id_pays;
     private String lib_pays;
 }

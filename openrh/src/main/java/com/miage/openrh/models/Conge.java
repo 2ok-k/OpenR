@@ -19,6 +19,7 @@ public class Conge {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_conge")
+    private Integer id_conge;
     private String mat_emp;
 
     @ManyToOne

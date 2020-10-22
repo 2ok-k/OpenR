@@ -19,7 +19,7 @@ import javax.persistence.Id;
 public class Entreprise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_entreprise;
+    private Integer id_entreprise;
     private String lib_entreprise;
     private String adresse_entreprise;
 }

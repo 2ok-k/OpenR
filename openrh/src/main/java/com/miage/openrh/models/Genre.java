@@ -17,6 +17,6 @@ import javax.persistence.*;
 public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_genre;
+    private Integer id_genre;
     private String lib_genre;
 }

@@ -19,6 +19,6 @@ import javax.persistence.Id;
 public class Structure {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code_struct;
+    private Integer code_struct;
     private String lib_dep;
 }
