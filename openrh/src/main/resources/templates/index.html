@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-    <title>Preadmin - Bootstrap Admin Template</title>
+    <title>Administration OpenRH</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/fullcalendar.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/plugins/morris/morris.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/fullcalendar.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/dataTables.bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/select2.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap-datetimepicker.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/plugins/morris/morris.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}">
     <!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
+    <script th:src="@{assets/js/html5shiv.min.js}"></script>
+    <script th:src="@{assets/js/respond.min.js}"></script>
 	<![endif]-->
 </head>
 
@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="page-title-box pull-left">
-                <h3>Preadmin</h3>
+                <h3>OpenRH</h3>
             </div>
             <a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
             <ul class="nav navbar-nav navbar-right user-menu pull-right">
@@ -47,7 +47,7 @@
                                     <a href="activities.html">
                                         <div class="media-left">
                                             <span class="avatar">
-												<img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
+												<img alt="John Doe" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
 											</span>
                                         </div>
                                         <div class="media-body">
@@ -149,9 +149,9 @@
                         <li class="submenu">
                             <a href="#"><i class="fa fa-video-camera camera" aria-hidden="true"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled" style="display: none;">
-                                <li><a href="voice-call.html">Voice Call</a></li>
-                                <li><a href="video-call.html">Video Call</a></li>
-                                <li><a href="incoming-call.html">Incoming Call</a></li>
+                                <li><a th:href="@{/voice-call}">Voice Call</a></li>
+                                <li><a th:href="video-call.html">Video Call</a></li>
+                                <li><a th:href="incoming-call.html">Incoming Call</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
@@ -426,7 +426,7 @@
                                         <li>
                                             <div class="activity-user">
                                                 <a href="profile.html" title="Lesley Grauer" data-toggle="tooltip" class="avatar">
-                                                    <img alt="Lesley Grauer" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                    <img alt="Lesley Grauer" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                                 </a>
                                             </div>
                                             <div class="activity-content">
@@ -450,7 +450,7 @@
                                         <li>
                                             <div class="activity-user">
                                                 <a href="profile.html" title="Catherine Manseau" data-toggle="tooltip" class="avatar">
-                                                    <img alt="Catherine Manseau" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                    <img alt="Catherine Manseau" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                                 </a>
                                             </div>
                                             <div class="activity-content">
@@ -463,7 +463,7 @@
                                         <li>
                                             <div class="activity-user">
                                                 <a href="#" title="Bernardo Galaviz" data-toggle="tooltip" class="avatar">
-                                                    <img alt="Bernardo Galaviz" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                    <img alt="Bernardo Galaviz" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                                 </a>
                                             </div>
                                             <div class="activity-content">
@@ -476,7 +476,7 @@
                                         <li>
                                             <div class="activity-user">
                                                 <a href="profile.html" title="Mike Litorus" data-toggle="tooltip" class="avatar">
-                                                    <img alt="Mike Litorus" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                    <img alt="Mike Litorus" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                                 </a>
                                             </div>
                                             <div class="activity-content">
@@ -489,7 +489,7 @@
                                         <li>
                                             <div class="activity-user">
                                                 <a href="profile.html" title="Jeffery Lalor" data-toggle="tooltip" class="avatar">
-                                                    <img alt="Jeffery Lalor" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                    <img alt="Jeffery Lalor" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                                 </a>
                                             </div>
                                             <div class="activity-content">
@@ -513,7 +513,7 @@
                                 <div class="navbar">
                                     <div class="user-details">
                                         <div class="pull-left user-img m-r-10">
-                                            <a href="profile.html" title="Mike Litorus"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status online"></span></a>
+                                            <a href="profile.html" title="Mike Litorus"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status online"></span></a>
                                         </div>
                                         <div class="user-info pull-left">
                                             <a href="profile.html" title="Mike Litorus"><span class="font-bold">Mike Litorus</span> <i class="typing-text">Typing...</i></a>
@@ -555,7 +555,7 @@
                                     <div class="chat chat-left">
                                         <div class="chat-avatar">
                                             <a href="profile.html" class="avatar">
-                                                <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                <img alt="John Doe" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                             </a>
                                         </div>
                                         <div class="chat-body">
@@ -603,7 +603,7 @@
                                     <div class="chat chat-left">
                                         <div class="chat-avatar">
                                             <a href="profile.html" class="avatar">
-                                                <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                <img alt="John Doe" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                             </a>
                                         </div>
                                         <div class="chat-body">
@@ -634,7 +634,7 @@
                                     <div class="chat chat-left">
                                         <div class="chat-avatar">
                                             <a href="profile.html" class="avatar">
-                                                <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                <img alt="John Doe" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                             </a>
                                         </div>
                                         <div class="chat-body">
@@ -663,7 +663,7 @@
                                     <div class="chat chat-left">
                                         <div class="chat-avatar">
                                             <a href="profile.html" class="avatar">
-                                                <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
+                                                <img alt="John Doe" th:src="@{assets/img/user.jpg}" class="img-responsive img-circle">
                                             </a>
                                         </div>
                                         <div class="chat-body">
@@ -679,7 +679,7 @@
                             <div class="panel-footer">
                                 <div class="message-bar">
                                     <div class="message-inner">
-                                        <a class="link attach-icon" href="#" data-toggle="modal" data-target="#drag_files"><img src="assets/img/attachment.png" alt=""></a>
+                                        <a class="link attach-icon" href="#" data-toggle="modal" data-target="#drag_files"><img th:src="@{assets/img/attachment.png}" alt=""></a>
                                         <div class="message-area">
                                             <div class="input-group">
                                                 <textarea class="form-control" placeholder="Type message..."></textarea>
@@ -703,7 +703,7 @@
                                         <div class="add-task-btn-wrapper">
                                             <span class="add-task-btn btn btn-default btn-xs">
 													Add Task
-												</span>
+                                            </span>
                                         </div>
                                     </div>
                                     <ul class="nav navbar-nav pull-right custom-menu">
@@ -856,7 +856,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="pull-left user-img m-r-10">
-                                                <a href="profile.html" title="John Doe"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status online"></span></a>
+                                                <a href="profile.html" title="John Doe"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status online"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis">John Doe</span>
@@ -876,7 +876,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="pull-left user-img m-r-10">
-                                                <a href="profile.html" title="Richard Miles"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status offline"></span></a>
+                                                <a href="profile.html" title="Richard Miles"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status offline"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis">Richard Miles</span>
@@ -896,7 +896,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="pull-left user-img m-r-10">
-                                                <a href="profile.html" title="John Doe"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status away"></span></a>
+                                                <a href="profile.html" title="John Doe"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status away"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis">John Doe</span>
@@ -916,7 +916,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="pull-left user-img m-r-10">
-                                                <a href="profile.html" title="Richard Miles"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status online"></span></a>
+                                                <a href="profile.html" title="Richard Miles"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status online"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis">Richard Miles</span>
@@ -936,7 +936,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="pull-left user-img m-r-10">
-                                                <a href="profile.html" title="John Doe"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status offline"></span></a>
+                                                <a href="profile.html" title="John Doe"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status offline"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis">John Doe</span>
@@ -956,7 +956,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="pull-left user-img m-r-10">
-                                                <a href="profile.html" title="Richard Miles"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status away"></span></a>
+                                                <a href="profile.html" title="Richard Miles"><img th:src="@{assets/img/user.jpg}" alt="" class="w-40 img-circle"><span class="status away"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis">Richard Miles</span>
@@ -1608,15 +1608,15 @@
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-    <script type="text/javascript" src="assets/js/select2.min.js"></script>
-    <script type="text/javascript" src="assets/js/moment.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/morris/morris.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/raphael/raphael-min.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" th:src="@{assets/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/jquery.slimscroll.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/select2.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/moment.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/bootstrap-datetimepicker.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/plugins/morris/morris.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/plugins/raphael/raphael-min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/app.js}"></script>
 </body>
 
 </html>
