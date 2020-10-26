@@ -14,7 +14,6 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "mat_emp")
 public class Employe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
