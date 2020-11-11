@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" th:src="@{/assets/img/favicon.png}">
     <title>Preadmin - Bootstrap Admin Template</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" th:src="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:src="@{/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:src="@{/assets/css/style.css}">
     <!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
+		<script th:src="@{/assets/js/html5shiv.min.js}"></script>
+		<script th:src="@{/assets/js/respond.min.js}"></script>
 	<![endif]-->
 </head>
 
@@ -21,7 +21,7 @@
         <div class="header">
             <div class="header-left">
                 <a href="index.html" class="logo">
-                    <img src="assets/img/logo.png" width="40" height="40" alt="">
+                    <img th:src="@{/assets/img/logo.png}" width="40" height="40" alt="">
                 </a>
             </div>
             <div class="page-title-box pull-left">
@@ -41,7 +41,7 @@
                                     <a href="activities.html">
                                         <div class="media-left">
                                             <span class="avatar">
-												<img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
+												<img alt="John Doe" th:src="@{/assets/img/user.jpg}" class="img-responsive img-circle">
 											</span>
                                         </div>
                                         <div class="media-body">
@@ -106,7 +106,7 @@
                 </li>
                 <li class="dropdown">
                     <a href="profile.html" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
-                        <span class="user-img"><img class="img-circle" src="assets/img/user.jpg" width="40" alt="Admin">
+                        <span class="user-img"><img class="img-circle" th:src="@{/assets/img/user.jpg}" width="40" alt="Admin">
 							<span class="status online"></span></span>
                         <span>Admin</span>
                         <i class="caret"></i>
@@ -627,10 +627,10 @@
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/app.js}"></script>
 </body>
 
 </html>
@@ -639,10 +639,10 @@
 </div>
 </div>
 <div class="sidebar-overlay" data-reff=""></div>
-<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/app.js}"></script>
 </body>
 
 </html>
