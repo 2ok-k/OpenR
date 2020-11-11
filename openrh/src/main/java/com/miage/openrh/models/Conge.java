@@ -36,3 +36,4 @@ public class Conge {
 
     private int duree;
 }
+
