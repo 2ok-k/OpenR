@@ -5,6 +5,10 @@ public class PremiereInscrip {
     private String prenom;
     private String poste;
 
+    public PremiereInscrip() {
+
+    }
+
     public String getNom() {
         return nom;
     }
