@@ -14,6 +14,10 @@ public class DemandePermission {
     private String date_retour;
     private String motif;
 
+    public DemandePermission() {
+
+    }
+
     public String getMat_emp() {
         return mat_emp;
     }

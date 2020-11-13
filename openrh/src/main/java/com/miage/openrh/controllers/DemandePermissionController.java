@@ -1,6 +1,7 @@
 package com.miage.openrh.controllers;
 
 import com.miage.openrh.models.Categorie;
+import com.miage.openrh.models.DemandePermission;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,24 +13,24 @@ import java.sql.SQLException;
 @Controller
 public class DemandePermissionController {
 
-    @PostMapping(value = "/enregistrerDemandePer")
-    public String enregistrercategorie(@ModelAttribute("categorie") Categorie categorie, Model model) {
+    @PostMapping(value = "/enregistrerDemandePerm")
+    public String enregistrerDemandePerm(@ModelAttribute("demandePermission") DemandePermission demandePermission, Model model) {
         try {
-            categorie.save();
+            demandePermission.save();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        return categorie(model);
+        return demandePermission(model);
     }
 
 
-    @GetMapping(value ="/categorie")
-    public String categorie(Model model){
-        Categorie categorie = new Categorie();
+    @GetMapping(value ="/demandePermission")
+    public String demandePermission(Model model){
+        DemandePermission demandePermission = new DemandePermission();
 
-        model.addAttribute("Categorie",categorie);
+        model.addAttribute("DemandePermission",demandePermission);
 
-        return "categorie";
+        return "demandePermission";
     }
 }

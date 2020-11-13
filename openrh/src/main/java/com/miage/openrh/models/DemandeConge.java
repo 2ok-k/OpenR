@@ -16,6 +16,10 @@ public class DemandeConge {
     private String type_conge;
     private String motif;
 
+    public DemandeConge() {
+
+    }
+
     public String getMat_emp() {
         return mat_emp;
     }
