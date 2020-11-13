@@ -75,7 +75,7 @@ public class DemandePermission {
 
         db.connect();
 
-        db.sendQuery("INSERT INTO DemandePermission(mat_emp,nom,prenom,date_depart,date_retour,motif) VALUES(?,?,?,?,?,?)", new ArrayList<>() {
+        db.sendQuery("INSERT INTO demandePermission(mat_emp,nom,prenom,date_depart,date_retour,motif) VALUES(?,?,?,?,?,?)", new ArrayList<>() {
             {
                 add(mat_emp);
                 add(nom);
