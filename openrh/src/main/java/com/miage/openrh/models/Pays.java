@@ -9,6 +9,10 @@ public class Pays {
     private Integer id_pays;
     private String lib_pays;
 
+    public Pays() {
+
+    }
+
     public Integer getId_pays() {
         return id_pays;
     }

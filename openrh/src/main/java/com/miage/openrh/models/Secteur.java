@@ -9,6 +9,10 @@ public class Secteur {
     private Integer id_sect;
     private String lib_sect;
 
+    public Secteur() {
+
+    }
+
     public Integer getId_sect() {
         return id_sect;
     }
