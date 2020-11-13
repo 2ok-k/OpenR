@@ -1,5 +1,11 @@
 package com.miage.openrh.models;
 
+
+import com.miage.openrh.Database;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 public class PremiereInscrip {
     private String nom;
     private String prenom;
@@ -37,5 +43,25 @@ public class PremiereInscrip {
         this.nom = nom;
         this.prenom = prenom;
         this.poste = poste;
+    }
+
+    public void save() throws SQLException {
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+        try {
+            db.sendQuery("INSERT INTO first(nom,prenom,poste) VALUES(?,?,?)", new ArrayList<>() {
+                {
+                    add(nom);
+                    add(prenom);
+                    add(poste);
+                }
+            }, resultSet -> {
+
+            });
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
     }
 }
