@@ -6,11 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 
-import com.miage.openrh.Database;
-
-import java.sql.SQLException;
-import java.util.ArrayList;
-
 public class DemandeConge {
     private String mat_emp;
     private String nom;

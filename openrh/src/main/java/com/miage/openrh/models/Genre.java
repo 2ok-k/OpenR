@@ -9,6 +9,10 @@ public class Genre {
     private Integer id_genre;
     private String lib_genre;
 
+    public Genre() {
+
+    }
+
     public Integer getId_genre() {
         return id_genre;
     }
