@@ -9,6 +9,10 @@ public class Structure {
     private Integer cod_struct;
     private String lib_struct;
 
+    public Structure() {
+
+    }
+
     public Integer getCod_struct() {
         return cod_struct;
     }
