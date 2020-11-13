@@ -10,6 +10,10 @@ public class TypeContrat {
     private Integer id_type_contrat;
     private String lib_contrat;
 
+    public TypeContrat() {
+
+    }
+
     public Integer getId_type_contrat() {
         return id_type_contrat;
     }
