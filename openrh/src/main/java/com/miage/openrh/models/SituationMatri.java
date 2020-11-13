@@ -1,25 +1,49 @@
 package com.miage.openrh.models;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import com.miage.openrh.Database;
 
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id_sit")
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 public class SituationMatri {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_sit;
     private String lib_sit;
 
-    @OneToMany(mappedBy = "employe")
-    private List<Employe> employes;
+    public Integer getId_sit() {
+        return id_sit;
+    }
+
+    public void setId_sit(Integer id_sit) {
+        this.id_sit = id_sit;
+    }
+
+    public String getLib_sit() {
+        return lib_sit;
+    }
+
+    public void setLib_sit(String lib_sit) {
+        this.lib_sit = lib_sit;
+    }
+
+    public SituationMatri(Integer id_sit, String lib_sit) {
+        this.id_sit = id_sit;
+        this.lib_sit = lib_sit;
+    }
+    public void save() throws SQLException {
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        db.sendQuery("INSERT INTO genre (id_sit,lib_sit) VALUES(?,?)", new ArrayList<>() {
+            {
+                add(id_sit);
+                add(lib_sit);
+            }
+        }, resultSet -> {
+
+        });
+
+        db.disconnect();
+    }
 }
