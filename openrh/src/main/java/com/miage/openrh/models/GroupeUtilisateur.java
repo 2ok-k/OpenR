@@ -9,6 +9,10 @@ public class GroupeUtilisateur {
     private Integer id_grpUt;
     private String lib_grpUt;
 
+    public GroupeUtilisateur() {
+
+    }
+
     public Integer getId_grpUt() {
         return id_grpUt;
     }
