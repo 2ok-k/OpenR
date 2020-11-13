@@ -19,6 +19,10 @@ public class AjoutEmploye {
     private String poste;
     private String salaire;
 
+    public AjoutEmploye() {
+
+    }
+
     public String getNom() {
         return nom;
     }
