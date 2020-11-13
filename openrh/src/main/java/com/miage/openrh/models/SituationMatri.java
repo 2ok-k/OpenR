@@ -35,7 +35,7 @@ public class SituationMatri {
 
         db.connect();
 
-        db.sendQuery("INSERT INTO genre (id_sit,lib_sit) VALUES(?,?)", new ArrayList<>() {
+        db.sendQuery("INSERT INTO situationMatri (id_sit,lib_sit) VALUES(?,?)", new ArrayList<>() {
             {
                 add(id_sit);
                 add(lib_sit);

@@ -44,7 +44,7 @@ public class Entreprise {
 
         db.connect();
 
-        db.sendQuery("INSERT INTO genre (nom_entreprise,adresse_entreprise,email_entreprise) VALUES(?,?,?)", new ArrayList<>() {
+        db.sendQuery("INSERT INTO entreprise (nom_entreprise,adresse_entreprise,email_entreprise) VALUES(?,?,?)", new ArrayList<>() {
             {
                 add(nom_entreprise);
                 add(adresse_entreprise);

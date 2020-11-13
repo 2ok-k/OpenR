@@ -35,7 +35,7 @@ public class Pays {
 
         db.connect();
 
-        db.sendQuery("INSERT INTO genre (id_pays,lib_pays) VALUES(?,?)", new ArrayList<>() {
+        db.sendQuery("INSERT INTO pays (id_pays,lib_pays) VALUES(?,?)", new ArrayList<>() {
             {
                 add(id_pays);
                 add(lib_pays);
