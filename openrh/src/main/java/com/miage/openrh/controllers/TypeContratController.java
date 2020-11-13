@@ -1,6 +1,5 @@
 package com.miage.openrh.controllers;
 
-import com.miage.openrh.models.Structure;
 import com.miage.openrh.models.TypeContrat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

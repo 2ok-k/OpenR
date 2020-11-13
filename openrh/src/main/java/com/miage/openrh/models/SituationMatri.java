@@ -10,6 +10,10 @@ public class SituationMatri {
     private Integer id_sit;
     private String lib_sit;
 
+    public SituationMatri() {
+
+    }
+
     public Integer getId_sit() {
         return id_sit;
     }
