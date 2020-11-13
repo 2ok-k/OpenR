@@ -9,6 +9,10 @@ public class Categorie {
     private Integer id_cat;
     private String lib_cat;
 
+    public Categorie() {
+
+    }
+
     public Integer getId_cat() {
         return id_cat;
     }

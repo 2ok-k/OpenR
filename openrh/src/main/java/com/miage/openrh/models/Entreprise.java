@@ -10,6 +10,10 @@ public class Entreprise {
     private String adresse_entreprise;
     private String email_entreprise;
 
+    public Entreprise() {
+
+    }
+
     public String getNom_entreprise() {
         return nom_entreprise;
     }
