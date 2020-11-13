@@ -1,26 +1,49 @@
 package com.miage.openrh.models;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.miage.openrh.Database;
 
-import javax.persistence.*;
-import java.util.List;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id_pays")
 public class Pays {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_pays;
     private String lib_pays;
 
-    @OneToMany(mappedBy = "employe")
-    private List<Employe> employes;
+    public Integer getId_pays() {
+        return id_pays;
+    }
+
+    public void setId_pays(Integer id_pays) {
+        this.id_pays = id_pays;
+    }
+
+    public String getLib_pays() {
+        return lib_pays;
+    }
+
+    public void setLib_pays(String lib_pays) {
+        this.lib_pays = lib_pays;
+    }
+
+    public Pays(Integer id_pays, String lib_pays) {
+        this.id_pays = id_pays;
+        this.lib_pays = lib_pays;
+    }
+
+    public void save() throws SQLException {
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        db.sendQuery("INSERT INTO genre (id_pays,lib_pays) VALUES(?,?)", new ArrayList<>() {
+            {
+                add(id_pays);
+                add(lib_pays);
+            }
+        }, resultSet -> {
+
+        });
+
+        db.disconnect();
+    }
 }
