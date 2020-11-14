@@ -336,17 +336,17 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-box">
-                            <form class="form-horizontal" action="#">
+                            <form class="form-horizontal" th:action="@{/enregistrerpays}" method="post" th:object="${Pays}">
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">identifiant</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" th:field="*{id_pays}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Libellé</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" th:field="*{lib_pays}">
                                     </div>
                                 </div>
                                 <div>
@@ -372,10 +372,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
+                                        <tr th:each="pays : ${pays1}">
+                                            <td > <span th:text="pays.id_pays"></span></td>
                                             <th></th>
-                                            <td>Cote d'Ivoire</td>
+                                            <td><span  th:text="pays.lib_pays"></span></td>
                                         </tr>
                                     </tbody>
                                 </table>

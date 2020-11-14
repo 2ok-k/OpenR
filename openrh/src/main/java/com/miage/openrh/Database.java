@@ -40,7 +40,7 @@ public class Database {
         this.user = user;
         this.password = password;
         this.dbName = dbName;
-        url = this.url + host + ":" + port + "/" + this.dbName;
+        url = this.url + host + ":" + port + "/" + this.dbName+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     }
 
     //Constructeur 2
@@ -61,7 +61,7 @@ public class Database {
         port = 3306;
         this.user = "root";
         this.password = "root";
-        this.dbName = "gest_rh";
+        this.dbName = "openrh";
         url = this.url + host + ":" + port + "/" + this.dbName;
     }
 
@@ -70,8 +70,8 @@ public class Database {
         port = 3306;
         this.user = user;
         this.password = password;
-        this.dbName = "grh";
-        url = this.url + host + ":" + port + "/" + this.dbName;
+        this.dbName = "openrh";
+        url = this.url + host + ":" + port + "/" + this.dbName+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     }
 
     //Methode permettant de se connecter a la base de donnees
