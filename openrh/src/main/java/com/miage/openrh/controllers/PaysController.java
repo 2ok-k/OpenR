@@ -3,6 +3,7 @@ package com.miage.openrh.controllers;
 import com.miage.openrh.Database;
 import com.miage.openrh.models.Genre;
 import com.miage.openrh.models.Pays;
+import com.miage.openrh.models.TypeContrat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,8 +47,9 @@ public class PaysController {
             throwables.printStackTrace();
         }
 
-        model.addAttribute("Pays",pays);
         model.addAttribute("pays1",pays1);
+
+        model.addAttribute("Pays",pays);
 
         return "pays";
     }
