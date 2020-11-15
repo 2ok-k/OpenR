@@ -222,11 +222,10 @@
                                         <td th:text="${structure.cod_struct}"></td>
                                         <td th:text="${structure.lib_struct}"></td>
                                         <td>
-                                            <a href="#" type="button">Editer
-                                            </a>
-                                            <a href="*" type="button" color="red">
-                                                <font red>Supprimer</font>
-                                            </a>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-primary" type="button">Editer</a>
+                                                <a href="*" type="button" class="btn btn-danger" >Supprimer</a>
+                                            </div>
                                         </td>
 
                                     </tr>
@@ -449,6 +448,28 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="deleteModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmation de suppression</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Voulez-vous Supprimer?</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" id="confirmDeleteButton ">Save changes</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="sidebar-overlay" data-reff=""></div>
 <script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
 <script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
