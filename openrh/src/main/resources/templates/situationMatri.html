@@ -141,14 +141,14 @@
                     <li class="submenu">
                         <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> <span> Parametres</span> <span class="menu-arrow"></span></a>
                         <ul class="list-unstyled" style="display: none;">
-                            <li><a href="voice-call.html">Genre</a></li>
-                            <li><a href="video-call.html">Pays</a></li>
-                            <li><a href="incoming-call.html">Situation</a></li>
-                            <li><a href="incoming-call.html">Structure</a></li>
-                            <li><a href="incoming-call.html">Type contrat</a></li>
-                            <li><a href="incoming-call.html">Secteur</a></li>
-                            <li><a href="incoming-call.html">Catégorie</a></li>
-                            <li><a href="incoming-call.html">Groupe utilisateur</a></li>
+                            <li><a th:href="@{/genre}">Genre</a></li>
+                            <li><a th:href="@{/pays}">Pays</a></li>
+                            <li><a th:href="@{/situationMatri}">Situation</a></li>
+                            <li><a th:href="@{/structure}">Structure</a></li>
+                            <li><a th:href="@{/typeContrat}">Type contrat</a></li>
+                            <li><a th:href="@{/secteur}">Secteur</a></li>
+                            <li><a th:href="@{/categorie}">Catégorie</a></li>
+                            <li><a th:href="@{/groupeUtilisateur}">Groupe utilisateur</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -213,6 +213,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Libelle</th>
+                                        <th>Actions</th>
 
                                     </tr>
                                     </thead>
@@ -220,6 +221,13 @@
                                     <tr th:each="situationmatri : ${situationMatris}">
                                         <td th:text="${situationmatri.id_sit}"></td>
                                         <td th:text="${situationmatri.lib_sit}"></td>
+                                        <td>
+                                            <a href="#" type="button">Editer
+                                            </a>
+                                            <a href="*" type="button" color="red">
+                                                <font red>Supprimer</font>
+                                            </a>
+                                        </td>
 
                                     </tr>
                                     </tbody>
