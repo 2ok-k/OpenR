@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,5 +53,29 @@ public class PaysController {
         model.addAttribute("Pays",pays);
 
         return "pays";
+    }
+    @GetMapping("/pays/supprimer/")
+    String del_pays(HttpServletRequest request, Model model) {
+
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        try {
+
+            db.sendQuery("DELETE FROM pays WHERE id_pays=?", new ArrayList<Object>() {
+                {
+                    add(request.getParameter("del"));
+                }
+            }, resultSet -> {
+            });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return pays(model);
+
     }
 }

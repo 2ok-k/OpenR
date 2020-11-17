@@ -222,11 +222,9 @@
                                         <td th:text="${pays.id_pays}"></td>
                                         <td th:text="${pays.lib_pays}"></td>
                                         <td>
-                                            <a href="#" type="button">Editer
-                                            </a>
-                                            <a href="*" type="button" color="red">
-                                                <font red>Supprimer</font>
-                                            </a>
+                                            <div class="btn-group">
+                                                <a th:href="@{/pays/supprimer/(del=${pays.getId_pays()})}" type="button" class="btn btn-danger" >Supprimer</a>
+                                            </div>
                                         </td>
 
                                     </tr>

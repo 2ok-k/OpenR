@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,5 +50,29 @@ public class SituationMatriController {
         model.addAttribute("SituationMatri",situationMatri);
 
         return "situationMatri";
+    }
+    @GetMapping("/situationMatri/supprimer/")
+    String del_sit(HttpServletRequest request, Model model) {
+
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        try {
+
+            db.sendQuery("DELETE FROM situationmatri WHERE id_sit=?", new ArrayList<Object>() {
+                {
+                    add(request.getParameter("del"));
+                }
+            }, resultSet -> {
+            });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return situationMatri(model);
+
     }
 }

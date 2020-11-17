@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,5 +51,29 @@ public class SecteurController {
         model.addAttribute("Secteur",secteur);
 
         return "secteur";
+    }
+    @GetMapping("/secteur/supprimer/")
+    String del_sect(HttpServletRequest request, Model model) {
+
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        try {
+
+            db.sendQuery("DELETE FROM secteur WHERE id_sect=?", new ArrayList<Object>() {
+                {
+                    add(request.getParameter("del"));
+                }
+            }, resultSet -> {
+            });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return secteur(model);
+
     }
 }
