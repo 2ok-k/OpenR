@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,5 +52,29 @@ public class CategorieController {
         model.addAttribute("Categorie",categorie);
 
         return "categorie";
+    }
+    @GetMapping("/categorie/supprimer/")
+    String del_cat(HttpServletRequest request, Model model) {
+
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        try {
+
+            db.sendQuery("DELETE FROM categorie WHERE id_cat=?", new ArrayList<Object>() {
+                {
+                    add(request.getParameter("del"));
+                }
+            }, resultSet -> {
+            });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return categorie(model);
+
     }
 }

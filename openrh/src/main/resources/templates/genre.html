@@ -223,8 +223,7 @@
                                         <td th:text="${genre.lib_genre}"></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="#" class="btn btn-primary" type="button">Editer</a>
-                                                <a href="*" type="button" class="btn btn-danger" >Supprimer</a>
+                                                <a th:href="@{/genre/supprimer/(del=${genre.getId_genre()})}" type="button" class="btn btn-danger" >Supprimer</a>
                                             </div>
                                         </td>
 

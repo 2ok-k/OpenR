@@ -224,8 +224,7 @@
                                         <td th:text="${groupeutilisateur.lib_grpUt}"></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="#" class="btn btn-primary" type="button">Editer</a>
-                                                <a href="*" type="button" class="btn btn-danger" >Supprimer</a>
+                                                <a th:href="@{/groupeUtilisateur/supprimer/(del=${groupeutilisateur.getId_grpUt()})}" type="button" class="btn btn-danger" >Supprimer</a>
                                             </div>
                                         </td>
 
