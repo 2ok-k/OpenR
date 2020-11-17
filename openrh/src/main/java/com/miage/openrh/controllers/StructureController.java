@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,28 +28,53 @@ public class StructureController {
     }
 
 
-    @GetMapping(value ="/structure")
-    public String structure(Model model){
+    @GetMapping(value = "/structure")
+    public String structure(Model model) {
         Structure structure = new Structure();
-        List<Structure> structures=new ArrayList<>();
-        Database db =new Database("root", "","openrh");
+        List<Structure> structures = new ArrayList<>();
+        Database db = new Database("root", "", "openrh");
         db.connect();
 
         try {
-            db.sendQuery("SELECT * FROM structure",resultSet -> {
-                while(resultSet.next()){
-                    structures.add(new Structure(resultSet.getInt("cod_struct"),resultSet.getString("lib_struct")));
+            db.sendQuery("SELECT * FROM structure", resultSet -> {
+                while (resultSet.next()) {
+                    structures.add(new Structure(resultSet.getInt("cod_struct"), resultSet.getString("lib_struct")));
                 }
             });
 
-        }catch (SQLException throwables){
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        model.addAttribute("structures",structures);
+        model.addAttribute("structures", structures);
 
-        model.addAttribute("Structure",structure);
+        model.addAttribute("Structure", structure);
 
         return "structure";
+    }
+
+    @GetMapping("/structure/supprimer/")
+    String del_struct(HttpServletRequest request, Model model) {
+
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        try {
+
+            db.sendQuery("DELETE FROM structure WHERE cod_struct=?", new ArrayList<Object>() {
+                {
+                    add(request.getParameter("del"));
+                }
+            }, resultSet -> {
+            });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return structure(model);
+
     }
 }

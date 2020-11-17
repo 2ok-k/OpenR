@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" th:src="@{/assets/img/favicon.png}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/img/favicon.png}">
     <title>OpenRH-Gestion des ressources humaines</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" th:src="@{/assets/css/bootstrap.min.css}">
-    <link rel="stylesheet" type="text/css" th:src="@{/assets/css/font-awesome.min.css}">
-    <link rel="stylesheet" type="text/css" th:src="@{/assets/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}">
 
     <!--[if lt IE 9]>
 		<script th:src="@{/assets/js/html5shiv.min.js}"></script>
@@ -361,11 +361,8 @@
                                             <td>30-05-2020</td>
                                             <td>Mariage</td>
                                             <td>
-                                                <a href="#" type="button">Valider
-                                                </a>
-                                                <a href="*" type="button" color="red">
-                                                    <font red>Refuser</font>
-                                                </a>
+                                                <a href="#" class="btn btn-primary" type="button">Valider</a>
+                                                <a href="*" type="button" class="btn btn-danger">Refuser</a>
                                             </td>
                                         </tr>
                                     </tbody>
