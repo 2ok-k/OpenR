@@ -10,6 +10,7 @@ public class ApprobationCongeController {
 
     @GetMapping(value ="/approbationConge")
     public String approbationConge(Model model){
+
         return "approbationConge";
     }
 }

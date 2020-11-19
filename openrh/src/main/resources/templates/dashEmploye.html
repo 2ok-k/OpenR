@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" th:href="@{assets/img/favicon.png}">
-    <title>OpenRH-Gestion des ressources Humaines</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/font-awesome.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/fullcalendar.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/dataTables.bootstrap.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/select2.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap-datetimepicker.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/plugins/morris/morris.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}">
-    <!--[if lt IE 9]>
-    <script th:src="@{assets/js/html5shiv.min.js}"></script>
-    <script th:src="@{assets/js/respond.min.js}"></script>
-    <![endif]-->
-</head>
-
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{assets/img/favicon.png}">
+        <title>OpenRH-Gestion des ressources Humaines</title>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/font-awesome.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/fullcalendar.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/dataTables.bootstrap.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/select2.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap-datetimepicker.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/plugins/morris/morris.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}">
+        <!--[if lt IE 9]>
+        <script th:src="@{assets/js/html5shiv.min.js}"></script>
+        <script th:src="@{assets/js/respond.min.js}"></script>
+        <![endif]-->
+    </head>
 <body>
 <div class="main-wrapper">
     <div class="header">
@@ -50,7 +48,7 @@
                 <a href="profile.html" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
                         <span class="user-img"><img class="img-circle" th:src="@{assets/img/user.jpg}" width="40" alt="Admin">
 							<span class="status online"></span></span>
-                    <span>Admin</span>
+                    <span>Employe</span>
                     <i class="caret"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -77,43 +75,16 @@
                 <ul>
                     <li class="menu-title">Principal</li>
                     <li class="active">
-                        <a th:href="@{/dashAdmin}"><i class="fa fa-dashboard"></i>Tableau de bord</a>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="fa fa-users" aria-hidden="true"></i> <span>Employés</span> <span class="menu-arrow"></span></a>
-                        <ul class="list-unstyled" style="display: none;">
-                            <li><a th:href="@{/ajoutEmploye}">Ajouter Employé</a></li>
-                            <li><a th:href="@{/listeEmploye}">Liste Employé</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> <span>Paramètres</span> <span class="menu-arrow"></span></a>
-                        <ul class="list-unstyled" style="display: none;">
-                            <li><a th:href="@{/genre}">Genre</a></li>
-                            <li><a th:href="@{/pays}">Pays</a></li>
-                            <li><a th:href="@{/situationMatri}">Situation</a></li>
-                            <li><a th:href="@{/structure}">Structure</a></li>
-                            <li><a th:href="@{/typeContrat}">Type contrat</a></li>
-                            <li><a th:href="@{/secteur}">Secteur</a></li>
-                            <li><a th:href="@{/categorie}">Catégorie</a></li>
-                            <li><a th:href="@{/groupeUtilisateur}">Groupe utilisateur</a></li>
-                        </ul>
+                        <a th:href="@{/dashEmploye}"><i class="fa fa-dashboard"></i>Tableau de bord</a>
                     </li>
                     <li>
-                        <a th:href="@{/approbationConge}"><i class="fa fa-list" aria-hidden="true"></i>Approbation Congés</a>
+                        <a th:href="@{/demandeConge}"><i class="fa fa-list" aria-hidden="true"></i>Demander Congé</a>
                     </li>
                     <li>
-                        <a th:href="@{/approbPerm}"><i class="fa fa-list" aria-hidden="true"></i>Permissions</a>
+                        <a th:href="@{/demandePermission}"><i class="fa fa-list" aria-hidden="true"></i>Demander Permission</a>
                     </li>
                     <li>
-                        <a th:href="@{/entreprise}"><i class="fa fa-briefcase" aria-hidden="true"></i>Entreprise</a>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="fa fa-money" aria-hidden="true"></i> <span>Gestion des salaires</span> <span class="menu-arrow"></span></a>
-                        <ul class="list-unstyled" style="display: none;">
-                            <li><a href="voice-call.html">saisie de paie</a></li>
-                            <li><a href="video-call.html">Rubrique paie</a></li>
-                        </ul>
+                        <a ><i class="fa fa-user" aria-hidden="true"></i>Mon Profil</a>
                     </li>
                     <li>
                         <a href="tasks.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
@@ -127,28 +98,28 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-4">
                     <div class="dash-widget dash-widget5">
-                        <span class="dash-widget-icon bg-success"><i class="fa fa-money" aria-hidden="true"></i></span>
+                        <span class="dash-widget-icon bg-success"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
                         <div class="dash-widget-info">
                             <h3></h3>
-                            <span>Demandes <br> Congés</span>
+                            <span>Demander <br> Congé</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4">
                     <div class="dash-widget dash-widget5">
-                        <span class="dash-widget-icon bg-info"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                        <span class="dash-widget-icon bg-info"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                         <div class="dash-widget-info">
                             <h3></h3>
-                            <span>Groupes <br> Utilisateurs</span>
+                            <span>Demander <br> Permission</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4">
                     <div class="dash-widget dash-widget5">
-                        <span class="dash-widget-icon bg-warning"><i class="fa fa-files-o"></i></span>
+                        <span class="dash-widget-icon bg-warning"><i class="fa fa-user"></i></span>
                         <div class="dash-widget-info">
                             <h3></h3>
-                            <span>Paramètres <br> Généraux</span>
+                            <span>Mon <br> Profil</span>
                         </div>
                     </div>
                 </div>
@@ -205,5 +176,4 @@
     <script type="text/javascript" th:src="@{assets/plugins/raphael/raphael-min.js}"></script>
     <script type="text/javascript" th:src="@{assets/js/app.js}"></script>
 </body>
-
 </html>
