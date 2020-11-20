@@ -31,7 +31,6 @@ public class ListeEmployeController {
         }
 
         model.addAttribute("ajoutEmployes",ajoutEmployes);
-        //model.addAttribute("ListeEmploye",listeEmploye);
 
         return "listeEmploye";
     }
