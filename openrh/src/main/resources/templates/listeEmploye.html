@@ -137,19 +137,26 @@
                                         <th>Matricule</th>
                                         <th>Nom</th>
                                         <th>Prénom(s)</th>
-                                        <th>Type contrat</th>
+                                        <th>Genre</th>
                                         <th>Poste</th>
                                         <th>Salaire</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Edi48266</td>
-                                        <td>Tiger </td>
-                                        <td>Nixon</td>
-                                        <td>CDI</td>
-                                        <td>System Architect</td>
-                                        <td>$320,800</td>
+                                    <tr th:each="ajoutemploye : ${ajoutEmployes}">
+                                        <td th:text="${ajoutemploye.mat_emp}"></td>
+                                        <td th:text="${ajoutemploye.nom}"></td>
+                                        <td th:text="${ajoutemploye.prenom}"></td>
+                                        <td th:text="${ajoutemploye.genre}"></td>
+                                        <td th:text="${ajoutemploye.poste}"></td>
+                                        <td th:text="${ajoutemploye.salaire}"></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-primary" type="button">Editer</a>
+                                                <a th:href="@{/listeEmploye/supprimer/(del=${ajoutemploye.getMat_emp()})}" type="button" class="btn btn-danger">Supprimer</a>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

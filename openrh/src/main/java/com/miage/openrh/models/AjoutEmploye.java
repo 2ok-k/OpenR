@@ -6,12 +6,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class AjoutEmploye {
+    private String mat_emp;
     private String nom;
     private String prenom;
     private String genre;
     private String date_naiss;
     private String photo;
-    private String pays;
     private String lieu_naiss;
     private String email;
     private String numero;
@@ -21,6 +21,14 @@ public class AjoutEmploye {
 
     public AjoutEmploye() {
 
+    }
+
+    public String getMat_emp() {
+        return mat_emp;
+    }
+
+    public void setMat_emp(String mat_emp) {
+        this.mat_emp = mat_emp;
     }
 
     public String getNom() {
@@ -61,14 +69,6 @@ public class AjoutEmploye {
 
     public void setPhoto(String photo) {
         this.photo = photo;
-    }
-
-    public String getPays() {
-        return pays;
-    }
-
-    public void setPays(String pays) {
-        this.pays = pays;
     }
 
     public String getLieu_naiss() {
@@ -119,13 +119,13 @@ public class AjoutEmploye {
         this.salaire = salaire;
     }
 
-    public AjoutEmploye(String nom, String prenom, String genre, String date_naiss, String photo, String pays, String lieu_naiss, String email, String numero, String situationMatri, String poste, String salaire) {
+    public AjoutEmploye(String mat_emp, String nom, String prenom, String genre, String date_naiss, String photo, String lieu_naiss, String email, String numero, String situationMatri, String poste, String salaire) {
+        this.mat_emp = mat_emp;
         this.nom = nom;
         this.prenom = prenom;
         this.genre = genre;
         this.date_naiss = date_naiss;
         this.photo = photo;
-        this.pays = pays;
         this.lieu_naiss = lieu_naiss;
         this.email = email;
         this.numero = numero;
@@ -139,14 +139,14 @@ public class AjoutEmploye {
 
         db.connect();
 
-        db.sendQuery("INSERT INTO ajoutEmploye(nom,prenom,genre,date_naiss,photo,pays,lieu_naiss,email,numero,situationMatri,poste,salaire) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", new ArrayList<>() {
+        db.sendQuery("INSERT INTO ajoutemploye(mat_emp,nom,prenom,genre,date_naiss,photo,lieu_naiss,email,numero,situationMatri,poste,salaire) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", new ArrayList<>() {
             {
+                add(mat_emp);
                 add(nom);
                 add(prenom);
                 add(genre);
                 add(date_naiss);
                 add(photo);
-                add(pays);
                 add(lieu_naiss);
                 add(email);
                 add(numero);
