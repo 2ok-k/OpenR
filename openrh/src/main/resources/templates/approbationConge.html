@@ -129,7 +129,7 @@
                     <div class="col-lg-12">
                         <div class="card-box">
                             <div class="card-block">
-                                <h4 class="card-title">Demande</h4>
+                                <h4 class="card-title">Demandes</h4>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -162,7 +162,37 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-box">
+                            <div class="card-block">
+                                <h4 class="card-title">Liste demandes approuvées</h4>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Matricule</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Date depart</th>
+                                        <th>Date retour</th>
+                                        <th>Motif</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="dem : ${dems}">
+                                        <td th:text="${dem.mat_emp}"></td>
+                                        <td th:text="${dem.nom}"></td>
+                                        <td th:text="${dem.prenom}"></td>
+                                        <td th:text="${dem.date_depart}"></td>
+                                        <td th:text="${dem.date_retour}"></td>
+                                        <td th:text="${dem.motif}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="notification-box">

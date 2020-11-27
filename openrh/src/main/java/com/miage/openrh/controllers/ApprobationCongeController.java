@@ -18,6 +18,7 @@ public class ApprobationCongeController {
     @GetMapping(value ="/approbationConge")
     public String approbationConge(Model model){
         List<DemandeConge> demandeConges=new ArrayList<>();
+        List<DemandeConge> dems=new ArrayList<>();
 
         Database db =new Database("root", "","openrh");
         db.connect();
@@ -32,6 +33,18 @@ public class ApprobationCongeController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
+        try {
+            db.sendQuery("SELECT * FROM demandeconge WHERE approbation=true ",resultSet -> {
+                while(resultSet.next()){
+                    dems.add(new DemandeConge(resultSet.getString("mat_emp"),resultSet.getString("nom"),resultSet.getString("prenom"),resultSet.getString("date_depart"),resultSet.getString("date_retour"),resultSet.getString("piece_jointe"),resultSet.getString("type_conge"),resultSet.getString("motif")));
+                }
+            });
+
+        }catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
+
+        model.addAttribute("dems",dems);
         model.addAttribute("demandeConges",demandeConges);
 
         return "approbationConge";
