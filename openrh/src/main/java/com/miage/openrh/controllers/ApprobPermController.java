@@ -17,7 +17,7 @@ public class ApprobPermController {
     @GetMapping(value ="/approbPerm")
     public String approbPerm(Model model){
         List<DemandePermission> demandePermissions=new ArrayList<>();
-        List<DemandePermission> dems=new ArrayList<>();
+        List<DemandePermission> demandePermissions1=new ArrayList<>();
 
         Database db =new Database("root", "","openrh");
         db.connect();
@@ -35,7 +35,7 @@ public class ApprobPermController {
         try {
             db.sendQuery("SELECT * FROM demandepermission WHERE approbation=true ",resultSet -> {
                 while(resultSet.next()){
-                    dems.add(new DemandePermission(resultSet.getString("mat_emp"),resultSet.getString("nom"),resultSet.getString("prenom"),resultSet.getString("date_depart"),resultSet.getString("date_retour"),resultSet.getString("motif")));
+                    demandePermissions1.add(new DemandePermission(resultSet.getString("mat_emp"),resultSet.getString("nom"),resultSet.getString("prenom"),resultSet.getString("date_depart"),resultSet.getString("date_retour"),resultSet.getString("motif")));
                 }
             });
 
@@ -43,7 +43,7 @@ public class ApprobPermController {
             throwables.printStackTrace();
         }
 
-        model.addAttribute("dems",dems);
+        model.addAttribute("demandePermissions1",demandePermissions1);
         model.addAttribute(" demandePermissions", demandePermissions);
 
         return "approbPerm";

@@ -144,15 +144,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr th:each="demandepermission : ${demandePermissions}">
-                                            <td th:text="${demandepermission.mat_emp}"></td>
-                                            <td th:text="${demandepermission.nom}"></td>
-                                            <td th:text="${demandepermission.prenom}"></td>
-                                            <td th:text="${demandepermission.date_depart}"></td>
-                                            <td th:text="${demandepermission.date_retour}"></td>
-                                            <td th:text="${demandepermission.motif}"></td>
+                                        <tr th:each="demand : ${ }">
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
                                             <td>
-                                                <a th:href="@{/demandePermission/valider/(val=${demandepermission.getMat_emp()})}" class="btn btn-primary" type="button">Valider</a>
+                                                <a th:href="@{/demandePermission/valider/(val=)}" class="btn btn-primary" type="button">Valider</a>
                                                 <a href="*" type="button" class="btn btn-danger">Refuser</a>
                                             </td>
                                         </tr>
@@ -179,7 +179,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr th:each="dem : ${dems}">
+                                    <tr th:each="dem : ${demandePermissions1}">
                                         <td th:text="${dem.mat_emp}"></td>
                                         <td th:text="${dem.nom}"></td>
                                         <td th:text="${dem.prenom}"></td>
