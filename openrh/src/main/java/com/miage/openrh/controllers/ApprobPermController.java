@@ -16,6 +16,7 @@ import java.util.List;
 public class ApprobPermController {
     @GetMapping(value ="/approbPerm")
     public String approbPerm(Model model){
+        DemandePermission demandePermission = new DemandePermission();
         List<DemandePermission> demandePermissions=new ArrayList<>();
         List<DemandePermission> dems=new ArrayList<>();
 
@@ -42,7 +43,7 @@ public class ApprobPermController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
-
+        model.addAttribute("DemandePermission",demandePermission);
         model.addAttribute("dems",dems);
         model.addAttribute(" demandePermissions", demandePermissions);
 
