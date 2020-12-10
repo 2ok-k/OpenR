@@ -6,10 +6,9 @@ function imprimer(test) {
     document.body.innerHTML = originalContents;
 }
 
+var selectedRow = null
 function onEdit(td) {
-    var table = document.getElementById("list").getElementsByTagName("tbody")[0];
-    var newRow = table.insertRow(table.length);
     selectedRow = td.parentElement.parentElement;
     document.getElementById("code").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("code").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("libelle").value = selectedRow.cells[1].innerHTML;
 }
