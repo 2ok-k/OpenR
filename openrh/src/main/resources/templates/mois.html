@@ -120,71 +120,71 @@
     </div>
 </div>
 <div class="page-wrapper">
-        <div class="content container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h4 class="page-title">Parametres Generaux</h4>
+    <div class="content container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="page-title">Parametres Generaux</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card-box">
+                    <h4 class="card-title">Mois</h4>
+                    <form th:action="@{/enregistrermois}" method="post" th:object="${Mois}" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Identifiant</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" th:field="*{id_mois}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Libelle</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" th:field="*{lib_mois}">
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary">Valider</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-10">
-                    <div class="card-box">
-                        <h4 class="card-title">Genre</h4>
-                        <form th:action="@{/enregistrergenre}" method="post" th:object="${Genre}" class="form-horizontal">
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">Identifiant</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" th:field="*{id_genre}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">Libelle</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" th:field="*{lib_genre}">
-                                </div>
-                            </div>
-                            <div class="text-right">
-                                <button type="submit" class="btn btn-primary">Valider</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10">
-                    <div class="card-box">
-                        <div class="card-block">
-                            <h4 class="card-title"></h4>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Libelle</th>
-                                        <th>Actions</th>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="card-box">
+                    <div class="card-block">
+                        <h4 class="card-title"></h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Libelle</th>
+                                    <th>Actions</th>
 
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr th:each="genre : ${genres}">
-                                        <td th:text="${genre.id_genre}"></td>
-                                        <td th:text="${genre.lib_genre}"></td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a th:href="@{/genre/supprimer/(del=${genre.getId_genre()})}" type="button" class="btn btn-danger" >Supprimer</a>
-                                            </div>
-                                        </td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="mois : ${mois1}">
+                                    <td th:text="${mois.id_mois}"></td>
+                                    <td th:text="${mois.lib_mois}"></td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a th:href="@{/mois/supprimer/(del=${mois.getId_mois()})}" type="button" class="btn btn-danger" >Supprimer</a>
+                                        </div>
+                                    </td>
 
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <div class="sidebar-overlay" data-reff=""></div>
 <script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
