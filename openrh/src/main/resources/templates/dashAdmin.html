@@ -165,31 +165,24 @@
                                             <th>Matricule</th>
                                             <th>Nom</th>
                                             <th>Prénom(s)</th>
-                                            <th>Type contrat</th>
+                                            <th>Genre</th>
                                             <th>Poste</th>
                                             <th>Salaire</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Edi48266</td>
-                                            <td>Tiger </td>
-                                            <td>Nixon</td>
-                                            <td>CDI</td>
-                                            <td>System Architect</td>
-                                            <td>$320,800</td>
+                                        <tr th:each="ajoutemploye : ${ajoutEmployes}">
+                                            <td th:text="${ajoutemploye.mat_emp}"></td>
+                                            <td th:text="${ajoutemploye.nom}"></td>
+                                            <td th:text="${ajoutemploye.prenom}"></td>
+                                            <td th:text="${ajoutemploye.genre}"></td>
+                                            <td th:text="${ajoutemploye.poste}"></td>
+                                            <td th:text="${ajoutemploye.salaire}"></td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-            <div class="notification-box">
-                <div class="msg-sidebar notifications msg-noti">
-                    <div class="topnav-dropdown-header">
-                        <span>Messages</span>
                     </div>
                 </div>
             </div>
