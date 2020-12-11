@@ -87,7 +87,6 @@
                     <ul class="list-unstyled" style="display: none;">
                         <li><a th:href="@{/genre}">Genre</a></li>
                         <li><a th:href="@{/pays}">Pays</a></li>
-                        <li><a th:href="@{/mois}">Mois</a></li>
                         <li><a th:href="@{/situationMatri}">Situation</a></li>
                         <li><a th:href="@{/structure}">Structure</a></li>
                         <li><a th:href="@{/typeContrat}">Type contrat</a></li>
@@ -108,8 +107,8 @@
                 <li class="submenu">
                     <a href="#"><i class="fa fa-money" aria-hidden="true"></i> <span>Gestion des salaires</span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled" style="display: none;">
-                        <li><a  th:href="@{/paie}">saisie de paie</a></li>
-                        <li><a th:href="@{/rubrique}">Rubrique paie</a></li>
+                        <li><a href="voice-call.html">saisie de paie</a></li>
+                        <li><a href="video-call.html">Rubrique paie</a></li>
                     </ul>
                 </li>
                 <li>
@@ -134,30 +133,29 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Matricule</th>
+                                            <th >Matricule</th>
                                             <th>Nom</th>
                                             <th>Prenom</th>
                                             <th>Date depart</th>
                                             <th>Date retour</th>
                                             <th>Motif</th>
-                                            <th>Actions</th>
+                                            <th>Actions
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <tr th:each="demandePermission : ${ demandePermissions}">
-                                        <td th:text="${demandePermission.mat_emp}"></td>
-                                        <td th:text="${demandePermission.nom}"></td>
-                                        <td th:text="${demandePermission.prenom}"></td>
-                                        <td th:text="${demandePermission.date_depart}"></td>
-                                        <td th:text="${demandePermission.date_retour}"></td>
-                                        <td th:text="${demandePermission.motif}"></td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a th:href="@{/demandePermission/valider/(val=${demandePermission.getMat_emp()})}" class="btn btn-primary" type="button">Valider</a>
+                                        <tr th:each="demand : ${ }">
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td th:text=""></td>
+                                            <td>
+                                                <a th:href="@{/demandePermission/valider/(val=)}" class="btn btn-primary" type="button">Valider</a>
                                                 <a href="*" type="button" class="btn btn-danger">Refuser</a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -181,7 +179,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr th:each="dem : ${dems}">
+                                    <tr th:each="dem : ${demandePermissions1}">
                                         <td th:text="${dem.mat_emp}"></td>
                                         <td th:text="${dem.nom}"></td>
                                         <td th:text="${dem.prenom}"></td>
