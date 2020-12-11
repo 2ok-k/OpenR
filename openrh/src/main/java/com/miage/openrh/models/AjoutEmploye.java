@@ -9,26 +9,6 @@ import java.util.Random;
 
 public class AjoutEmploye {
 
-    public String givenUsingPlainJava_whenGeneratingRandomStringBounded_thenCorrect() {
-
-        int leftLimit = 97; // letter 'a'
-        int rightLimit = 122; // letter 'z'
-        int targetStringLength = 5;
-        Random random = new Random();
-        StringBuilder buffer = new StringBuilder(targetStringLength);
-        for (int i = 0; i < targetStringLength; i++) {
-            int randomLimitedInt = leftLimit + (int)
-                    (random.nextFloat() * (rightLimit - leftLimit + 1));
-            buffer.append((char) randomLimitedInt);
-        }
-        String generatedString = buffer.toString();
-
-        System.out.println(generatedString);
-        return givenUsingPlainJava_whenGeneratingRandomStringBounded_thenCorrect();
-    }
-
-
-    private String mat_emp = givenUsingPlainJava_whenGeneratingRandomStringBounded_thenCorrect();
     private String nom;
     private String prenom;
     private String genre;
@@ -40,6 +20,8 @@ public class AjoutEmploye {
     private String situationMatri;
     private String poste;
     private String salaire;
+
+
 
     public AjoutEmploye() {
 
@@ -156,6 +138,21 @@ public class AjoutEmploye {
         this.salaire = salaire;
     }
 
+    public String givenUsingJava8_whenGeneratingRandomAlphanumericString_thenCorrect() {
+        int leftLimit = 48; // numeral '0'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 5;
+        Random random = new Random();
+
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+        System.out.println(generatedString);
+        return generatedString;
+    }
+    private String mat_emp = givenUsingJava8_whenGeneratingRandomAlphanumericString_thenCorrect();
     public void save() throws SQLException {
         Database db = new Database("root", "", "openrh");
 
@@ -163,6 +160,7 @@ public class AjoutEmploye {
 
         db.sendQuery("INSERT INTO ajoutemploye(mat_emp,nom,prenom,genre,date_naiss,photo,lieu_naiss,email,numero,situationMatri,poste,salaire) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", new ArrayList<>() {
             {
+
                 add(mat_emp);
                 add(nom);
                 add(prenom);
