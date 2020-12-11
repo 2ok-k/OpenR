@@ -108,7 +108,7 @@
                 <li class="submenu">
                     <a href="#"><i class="fa fa-money" aria-hidden="true"></i> <span>Gestion des salaires</span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled" style="display: none;">
-                        <li><a href="voice-call.html">saisie de paie</a></li>
+                        <li><a  th:href="@{/paie}">saisie de paie</a></li>
                         <li><a th:href="@{/rubrique}">Rubrique paie</a></li>
                     </ul>
                 </li>
@@ -127,20 +127,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-10" id="formulaire">
+                <div class="col-md-10" id="editModal">
                     <div class="card-box">
                         <h4 class="card-title">Pays</h4>
                         <form th:action="@{/enregistrerpays}" method="post" th:object="${Pays}" class="form-horizontal">
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Code</label>
                                 <div class="col-md-8">
-                                    <input type="text" name="code" class="form-control" th:field="*{id_pays}">
+                                    <input type="text" id="code" class="form-control" th:field="*{id_pays}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Libelle</label>
                                 <div class="col-md-8">
-                                    <input type="text" name="libelle" class="form-control" th:field="*{lib_pays}">
+                                    <input type="text" id="libelle" class="form-control" th:field="*{lib_pays}">
                                 </div>
                             </div>
                             <div class="text-right">
@@ -174,7 +174,7 @@
                                                 <a th:href="@{/pays/supprimer/(del=${pays.getId_pays()})}" type="button" class="btn btn-danger" >Supprimer</a>
                                             </div>
                                             <div class="btn-group">
-                                                <a onclick="onEdit(this)" type="button" class="btn btn-primary" >Editer</a>
+                                                <a id="editButton" type="button" class="btn btn-primary" >Editer</a>
                                             </div>
                                         </td>
 

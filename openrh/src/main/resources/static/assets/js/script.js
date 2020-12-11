@@ -5,10 +5,9 @@ function imprimer(test) {
     window.print();
     document.body.innerHTML = originalContents;
 }
+$('document').ready(function () {
 
-var selectedRow = null
-function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("code").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("libelle").value = selectedRow.cells[1].innerHTML;
-}
+    $('table #editButton').on('click',function (event) {
+        $('#editModal').modal();
+    });
+});
