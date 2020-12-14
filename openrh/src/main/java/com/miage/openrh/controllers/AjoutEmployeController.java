@@ -49,6 +49,8 @@ public class AjoutEmployeController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
+
+
         try {
             db.sendQuery("SELECT * FROM genre",resultSet -> {
                 while(resultSet.next()){
@@ -58,7 +60,10 @@ public class AjoutEmployeController {
 
         }catch (SQLException throwables){
             throwables.printStackTrace();
-        }try {
+        }
+
+
+        try {
             db.sendQuery("SELECT * FROM situationmatri",resultSet -> {
                 while(resultSet.next()){
                     situationMatris.add(new SituationMatri(resultSet.getInt("id_sit"),resultSet.getString("lib_sit")));
@@ -68,6 +73,8 @@ public class AjoutEmployeController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
+
+        
         model.addAttribute("situationMatris",situationMatris);
         model.addAttribute("genres",genres);
         model.addAttribute("ajoutEmployes",ajoutEmployes);

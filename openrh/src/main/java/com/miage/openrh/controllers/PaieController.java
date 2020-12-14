@@ -31,6 +31,7 @@ public class PaieController {
         Paie paie = new Paie();
         List<Paie> paies=new ArrayList<>();
         List<Mois> mois1 = new ArrayList<>();
+        List<AjoutEmploye> ajoutEmployes = new ArrayList<>();
         Database db =new Database("root", "","openrh");
         db.connect();
 
@@ -44,6 +45,8 @@ public class PaieController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
+
+
         try {
             db.sendQuery("SELECT * FROM mois",resultSet -> {
                 while(resultSet.next()){
@@ -54,8 +57,21 @@ public class PaieController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
+
+        try {
+            db.sendQuery("SELECT * FROM ajoutemploye",resultSet -> {
+                while(resultSet.next()){
+                    ajoutEmployes.add(new AjoutEmploye(resultSet.getString("mat_emp"),resultSet.getString("nom"),resultSet.getString("prenom"),resultSet.getString("genre"),resultSet.getString("date_naiss"),resultSet.getString("photo"),resultSet.getString("lieu_naiss"),resultSet.getString("email"),resultSet.getString("numero"),resultSet.getString("situationMatri"),resultSet.getString("poste"),resultSet.getString("salaire")));
+                }
+            });
+
+        }catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
+
         model.addAttribute("mois1",mois1);
         model.addAttribute("paies",paies);
+        model.addAttribute("ajoutEmployes",ajoutEmployes);
 
         model.addAttribute("Paie",paie);
 
