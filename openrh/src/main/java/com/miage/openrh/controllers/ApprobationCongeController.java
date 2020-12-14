@@ -69,4 +69,28 @@ public class ApprobationCongeController {
         db.disconnect();
         return approbationConge(model);
     }
+    @GetMapping("/approbationConge/supprimer/")
+    String del_conge(HttpServletRequest request, Model model) {
+
+        Database db = new Database("root", "", "openrh");
+
+        db.connect();
+
+        try {
+
+            db.sendQuery("DELETE FROM demandeconge WHERE mat_emp=?", new ArrayList<Object>() {
+                {
+                    add(request.getParameter("del"));
+                }
+            }, resultSet -> {
+            });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return approbationConge(model);
+
+    }
 }

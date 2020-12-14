@@ -222,7 +222,9 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <center>
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </center>
                 </div>
             </form>
         </div>
@@ -239,6 +241,7 @@
                                 <th>Prenom</th>
                                 <th>Mois</th>
                                 <th>NET A PAYER</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -250,7 +253,7 @@
                                 <td th:text="${paie.net_payer}"></td>
                                 <td>
                                     <div class="btn-group">
-                                        <a th:href="@{/paie/supprimer/(del=${paie.getMat_emp()})}" type="button" class="btn btn-danger" >Supprimer</a>
+                                        <a th:href="@{/paie/supprimer/(del=${paie.getMat_emp()})}" type="button" class="btn btn-danger" ><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </div>
                                 </td>
                             </tr>

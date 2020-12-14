@@ -153,8 +153,8 @@
                                             <td th:text="${demandeconge.motif}"></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a th:href="@{/demandeConge/valider/(val=${demandeconge.getMat_emp()})}" class="btn btn-primary" type="button">Valider</a>
-                                                    <a href="*" type="button" class="btn btn-danger">Refuser</a>
+                                                    <a th:href="@{/demandeConge/valider/(val=${demandeconge.getMat_emp()})}" class="btn btn-primary" type="button"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                                    <a th:href="@{/approbationConge/supprimer/(del=${demandeconge.getMat_emp()})}" type="button" class="btn btn-danger"><i class="fa fa-window-close" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
                                         </tr>

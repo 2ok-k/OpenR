@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{assets/img/favicon.png}">
+    <title>OpenRH - Gestion des ressources humaines</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}">
+    <!--[if lt IE 9]>
+    <script th:src="@{assets/js/html5shiv.min.js}"></script>
+    <script th:src="@{assets/js/respond.min.js}"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="main-wrapper coming-wrapper">
+    <div class="table-cell">
+        <div class="container">
+            <div class="title-section">
+                <h1 class="coming-title">ACCUEIL OpenRH</h1>
+                <p class="sub-title">Bienvenue sur le Logiciel de gestion rh OpenRH</p>
+            </div>
+            <div class="main-wrapper error-wrapper">
+                <div class="error-box">
+                    <div class="col-md-6">
+                        <div class="lock-user">
+                            <img class="img-circle" th:src="@{assets/img/user.jpg}" alt="">
+                            <a th:href="@{/dashAdmin}">Administrateur</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="lock-user">
+                            <img class="img-circle" th:src="@{assets/img/user.jpg}" alt=""><br>
+                            <a th:href="@{/dashEmploye}">Employé</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" th:src="@{assets/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{assets/js/app.js}"></script>
+</body>
+
+</html>
