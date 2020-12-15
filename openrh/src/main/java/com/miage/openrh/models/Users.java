@@ -4,11 +4,16 @@ import com.miage.openrh.Database;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Users {
     private String groupe_util;
     private String matricule;
     private String password;
+
+    public Users() {
+
+    }
 
     public String getGroupe_util() {
         return groupe_util;
@@ -56,5 +61,33 @@ public class Users {
         });
 
         db.disconnect();
+    }
+
+    public boolean exist() {
+        Database db = new Database("root", "", "gth");
+
+        db.connect();
+
+        AtomicBoolean exist = new AtomicBoolean(false);
+
+
+        try {
+            db.sendQuery("SELECT * FROM users WHERE matricule=? AND password=?", new ArrayList<>() {
+                {
+                    add(matricule);
+                    add(password);
+                }
+            }, resultSet -> {
+                if (resultSet.next()) {
+                    exist.set(true);
+                }
+            });
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        db.disconnect();
+
+        return exist.get();
     }
 }
