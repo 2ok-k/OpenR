@@ -26,14 +26,14 @@
                         <div class="account-logo">
                             <a href="index.html"><img th:src="@{/assets/img/logo.png}" alt="Preadmin"></a>
                         </div>
-                        <form action="index.html">
+                        <form th:action="@{/verify}" method="post" th:object="${users}">
                             <div class="form-group form-focus">
                                 <label class="control-label">Matricule</label>
-                                <input class="form-control floating" type="text">
+                                <input class="form-control floating" th:fied="*{matricule}" type="text">
                             </div>
                             <div class="form-group form-focus">
                                 <label class="control-label">Mot de passe</label>
-                                <input class="form-control floating" type="password">
+                                <input class="form-control floating" th:fied="*{password}" type="password">
                             </div>
                             <div class="form-group text-center">
                                 <button class="btn btn-primary btn-block account-btn" type="submit">se connecter</button>
