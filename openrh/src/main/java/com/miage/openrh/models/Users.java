@@ -64,7 +64,7 @@ public class Users {
     }
 
     public boolean exist() {
-        Database db = new Database("root", "", "gth");
+        Database db = new Database("root", "", "openrh");
 
         db.connect();
 
