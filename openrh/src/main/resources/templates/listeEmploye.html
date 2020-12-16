@@ -80,7 +80,7 @@
                         <li><a th:href="@{/listeEmploye}">Liste Employés</a></li>
                         <li><a th:href="@{/affectation}">Affectation Employés</a></li>
                         <li><a th:href="@{/absence}">Saisie des absences</a></li>
-                        <li><a th:href="@{/listepresence}">Listes présences</a></li>
+                        <li><a th:href="@{/listepresence}">Liste présences</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -124,7 +124,7 @@
     <div class="content container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <h4 class="page-title">Liste des employés</h4>
+                <h4 class="page-title">Liste des employés Présents</h4>
             </div>
         </div>
         <div class="row">
@@ -132,7 +132,7 @@
                 <div class="card-box">
                     <div class="card-block">
                         <h4 class="card-title"></h4>
-                        <a th:href="@{/ajoutEmploye}" class="btn btn-primary">Ajouter Employé</a>
+                        <a th:href="@{/presence}" class="btn btn-primary">Ajouter Employé</a>
                         <a href="#" class="btn btn-primary" onClick="imprimer('test')">Imprimer</a>
                         <div class="table-responsive" id="test">
                             <table class="table">

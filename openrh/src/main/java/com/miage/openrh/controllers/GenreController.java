@@ -2,7 +2,6 @@ package com.miage.openrh.controllers;
 
 import com.miage.openrh.Database;
 import com.miage.openrh.models.Genre;
-import com.miage.openrh.models.Pays;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
