@@ -26,7 +26,7 @@
                         <div class="account-logo">
                             <a href="index.html"><img th:src="@{/assets/img/logo.png}" alt="Preadmin"></a>
                         </div>
-                        <form th:action="@{/verify}" method="post" th:object="${users}">
+                        <form th:action="@{/dashAdmin}" method="post" th:object="${users}">
                             <div class="form-group form-focus">
                                 <label class="control-label">Matricule</label>
                                 <input class="form-control floating" th:field="*{matricule}" type="text">

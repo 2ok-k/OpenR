@@ -80,7 +80,11 @@
                     <ul class="list-unstyled" style="display: none;">
                         <li><a th:href="@{/ajoutEmploye}">Ajouter Employé</a></li>
                         <li><a th:href="@{/listeEmploye}">Liste Employés</a></li>
-                        <li><a th:href="@{/affectation}">Affectation Employés</a></li>
+                        <a href="#"><span>Contrats de travail</span> <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <li><a th:href="@{/cdd}">CDD</a></li>
+                            <li><a th:href="@{/cdi}">CDI</a></li>
+                        </ul>
                         <li><a th:href="@{/absence}">Saisie des absences</a></li>
                         <li><a th:href="@{/listepresence}">Listes présences</a></li>
                     </ul>
@@ -113,10 +117,11 @@
                     <ul class="list-unstyled" style="display: none;">
                         <li><a  th:href="@{/paie}">saisie de paie</a></li>
                         <li><a th:href="@{/rubrique}">Rubrique paie</a></li>
+                        <li><a th:href="@{/fichepaie}">Fiche de paie</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="tasks.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
+                    <a th:href="@{/login1}"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
                 </li>
             </ul>
         </div>

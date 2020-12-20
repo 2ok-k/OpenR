@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template :: head"/>
+<body>
+<form action="">
+    <input id="impression" name="impression" type="button" onclick="imprimer_page()" value="Imprimer" />
+    <div id="test" class="container border bg-light">
+        <p class="h3 spacer-tp-50 text-center" style="text-decoration: underline">CONTRAT DE TRAVAIL A DUREE INDETERMINEE</p>
+        <div class="spacer-tp-15 card-body">
+            <div class="form-group">
+                <p>Société : <input  style="border: 0"></p>
+                <p>Siège social : <input  style="border: 0"></p>
+                <p th:text="'Capital de 100 000 000 FRCFA'">Capital de euros </p>
+            </div>
+        </div>
+
+        <div class="spacer-tp-15 card-body">
+            <div class="form-group">
+                <p>Le présent contrat est conclu pour une durée indéterminée entre les soussignés : </p>
+                <span>-la société <input  style="border: 0">représentée par Mr <input  style="border: 0">, en sa qualité de <input  style="border: 0"> </span>
+            </div>
+            <div class="form-group spacer-tp-15">
+                <p class="" style="font-weight: bold">Il a été conclu ce qui suit : </p>
+                <p style="font-weight: bold">Le présent contrat est régi par la convention collective</p>
+                <p style="font-weight: bold">Les parties s’y réfèreront pour toutes les dispositions non prévues au contrat.</p>
+            </div>
+
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 1: Durée </div>
+
+            <div class="container">
+                <p>Le  présent  contrat  prend  effet  le  <input type="date" style="border: 0">
+                <p>Ce contrat est à une durée indéterminée.</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 2: période d’essai </div>
+
+            <div class="container">
+                <p>L’engagement  ne  deviendra  définitif  qu’après  une  période  d’essai  de  <input type="date" style="border: 0"> jours  11(ou  mois)  de  travail   effectif,</p>
+                <p>durant   laquelle   les   parties   peuvent   rompre   le   contrat   sans   préavis   ni   indemnité.</p>
+                <p>Cette  période  d’essai  pourra  être  renouvelée  une  fois,  par  écrit,  sous  réserve  de  l’accord  des  deux parties</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 3 : obligations professionnelles</div>
+
+            <div class="container">
+                <p>Mr <input  style="border: 0">  s’engage,  conformément   à  l’article  L  120-4  du  code  du  travail  à  exécuter  son  contrat de bonne foi.</p>
+                <p>Il s’oblige à : </p>
+                <p>exécuter son travail consciencieusement, </p>
+                <p>respecter les directives de l’employeur</p>
+                <p>respecter les consignes d’hygiène et de sécurité du règlement intérieur</p>
+                <p>être loyal et ne pas commettre d’acte contraire à l’intérêt de l’employeur,</p>
+                <p>rester discret sur l’activité de l’entreprise que ce à l’intérieur ou à l’extérieur de l’entreprise, </p>
+                <p>et à avertir son employeur de sa situation(maladie, démission, mariage,   naissance,  ...)  et  ceci  dans  les  délais  légaux  (ou  prévus  par  la  convention  collective).</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 4 : durée du temps de travail</div>
+
+            <div class="container">
+                <p>Chaque  journée  de  travail  ne  pourra  avoir  qu’une  coupure  qui  ne  pourra  excéder  2  heures,  conformément à l’article L 212-4-4 du code du travail.</p>
+                <p>La durée de travail de Mr <input  style="border: 0"> sera de <input type="time"  style="border: 0"> heures par semaine et de <input type="time"  style="border: 0"> heures par semaine</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 5 : modification de la répartition des heures de travail</div>
+
+            <div class="container">
+                <p>La répartition du temps de travail pourra être modifiée. Cette modification, conformément à l’article L 212-4-3 du code du travail, devra être notifiée au salarié sept jours au moins avant la date à laquelle elle doit avoir lieu 17. Cette notification sera faite par lettre recommandée avec accusé de réception.</p>
+                <p>Cette  modification  pourra  entraîner  une  répartition  du  temps  de  travail  sur  tous  les  jours  d’ouverture de la société, et toutes les plages horaires</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 6 : heures supplémentaires</div>
+
+            <div class="container">
+                <p>Il  pourra  être  demandé  à  Mr <input  style="border: 0"> de  faire  des  heures  supplémentaires,  dans  la  limite  de  1/10ème de la durée de travail hebdomadaire (ou mensuelle)  prévue au contrat.</p>
+                <p>Ces heures ne donneront pas lieu à majoration, et seront rémunérées au taux normal. La  durée  totale  du  travail  ne  pourra  atteindre  celle  de  la  durée  légale  24  du  travail  à  temps  complet.</p>
+            </div>
+
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 7 : lieu de travail</div>
+
+            <div class="container">
+                <p>Le  lieu  de  travail  est  situé  à <input  style="border: 0"></p>
+                <p>Pour les besoins de l’entreprise, la société se réserve le droit de demander à Mr <input  style="border: 0"> d’effectuer des déplacements n’entraînant pas de changement de résidence. Ces déplacements seront temporaires, et ne pourront avoir une durée supérieure à <input  style="border: 0"> jours consécutifs. Les frais occasionnés seront pris en charge par l’entreprise</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 8 : la rémunération</div>
+
+            <div class="container">
+                <p>Mr <input  style="border: 0"> percevra une rémunération mensuelle brute de <input  style="border: 0"> FRCFA. ajouter si nécessaire les modalités de calcul des gratifications, de l’intéressement, des frais professionnels, tous les avantages en nature..</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 9 : rupture du contrat</div>
+
+            <div class="container">
+                <p>Le présent contrat est résiliable avant le terme convenu seulement dans les cas suivants :</p>
+                <p>En cas de force majeure (ex : incendie dans l’entreprise, catastrophes naturelles...)</p>
+                <p>Accord entre les parties pour rompre immédiatement le contrat</p>
+                <p>En cas de faute grave ou lourde de la part de Mr <input  style="border: 0"> ou de l’employeur</p>
+                <p>En cas d’embauche en C.D.I. de Mr <input  style="border: 0"> dans une autre entreprise.</p>
+                <p>Mr <input  style="border: 0"> devra alors respecter un préavis qui lui sera notifié par écrit</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 10 : congés payés</div>
+
+            <div class="container">
+                <p>Conformément   aux   dispositions   légales   (   article   L   223-2   du   code   du   travail),   ou conventionnelles, Mr <input  style="border: 0"> aura droit à <input  style="border: 0"> jours de congés payés par an. La  date  de  ces  congés  sera  fixée  par  l’employeur,  après  consultation  des  représentants  du  personnel (ou par la convention collective) . Les  congés  non  pris  donneront  lieu  au  versement  d’une  indemnité  compensatrice  de  congés  payés.</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 11 : retraite complémentaire et prévoyance</div>
+
+            <div class="container">
+                <p>Mr <input  style="border: 0"> accepte  que  les  cotisations  salariales  afférentes  à  ces  régimes  soient  prélevées sur sa fiche de paie.</p>
+            </div>
+
+            <div class="card-title spacer-tp-50" style="font-size: 1.2em; text-decoration: underline;">Article 12 : déclaration d’embauche</div>
+
+            <div class="container">
+                <p>La déclaration préalable à l’embauche de Mr <input  style="border: 0"> a été faite auprès de la CNPS de  <input  style="border: 0"> (adresse)  auprès  de  laquelle  la  société  <input  style="border: 0"> est immatriculée sous le n°<input  style="border: 0"></p>
+            </div>
+
+            <div class="container spacer-tp-50 spacer-bt-25">
+                <p class="text-center">Fait en deux exemplaires, à <input  style="border: 0">, le <input type="date"  style="border: 0"> </p>
+            </div>
+
+            <div class="row spacer-bt-50">
+                <div class="col">
+                    <p>Mr <input  style="border: 0">     </p>
+                    <p>En qualité de <input  style="border: 0"> </p>
+                    <p>Pour la société <input  style="border: 0"> </p>
+                </div>
+                <div class="col">
+                    <p>Mr <input  style="border: 0"> </p>
+                    <p>Employé</p>
+                </div>
+            </div>
+
+            <div class="row spacer-bt-75">
+                <div class="col">
+                    <p>Signature précédée </p>
+                    <p>de la mention manuscrite </p>
+                    <p>« lu et approuvé »</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+<script type="text/javascript" th:src="@{/assets/js/script.js}"></script>
+
+</body>
+</html>

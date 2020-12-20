@@ -78,7 +78,11 @@
                     <ul class="list-unstyled" style="display: none;">
                         <li><a th:href="@{/ajoutEmploye}">Ajouter Employé</a></li>
                         <li><a th:href="@{/listeEmploye}">Liste Employés</a></li>
-                        <li><a th:href="@{/affectation}">Affectation Employés</a></li>
+                        <a href="#"><span>Contrats de travail</span> <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <li><a th:href="@{/cdd}">CDD</a></li>
+                            <li><a th:href="@{/cdi}">CDI</a></li>
+                        </ul>
                         <li><a th:href="@{/absence}">Saisie des absences</a></li>
                         <li><a th:href="@{/listepresence}">Liste présences</a></li>
                     </ul>
@@ -111,10 +115,11 @@
                     <ul class="list-unstyled" style="display: none;">
                         <li><a th:href="@{/paie}">saisie de paie</a></li>
                         <li><a th:href="@{/rubrique}">Rubrique paie</a></li>
+                        <li><a th:href="@{/fichepaie}">Fiche de paie</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="tasks.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
+                    <a th:href="@{/login1}"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
                 </li>
             </ul>
         </div>
@@ -131,10 +136,16 @@
             <div class="col-lg-12">
                 <div class="card-box">
                     <div class="card-block">
+                        <form method="get" action="@{/listepresence}">
+                            <div class="col-md-3">
+                                <input class="form-control  lighter-table-filter" placeholder="rechercher" type="search" data-table="table-info"  id="search">
+                            </div>
+                        </form>
+                        <br><br><br>
                         <h4 class="card-title"></h4>
                         <a href="#" class="btn btn-primary" onClick="imprimer('test')">Imprimer</a>
                         <div class="table-responsive" id="test">
-                            <table class="table">
+                            <table class="table-info table">
                                 <thead>
                                 <tr>
                                     <th>Matricule</th>

@@ -79,7 +79,6 @@
                     <ul class="list-unstyled" style="display: none;">
                         <li><a th:href="@{/ajoutEmploye}">Ajouter Employé</a></li>
                         <li><a th:href="@{/listeEmploye}">Liste Employés</a></li>
-                        <li><a th:href="@{/affectation}">Affectation Employés</a></li>
                         <li><a th:href="@{/absence}">Saisie des absences</a></li>
                         <li><a th:href="@{/listepresence}">Liste présences</a></li>
                     </ul>
@@ -115,7 +114,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="tasks.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
+                    <a th:href="@{/login1}"><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion</a>
                 </li>
             </ul>
         </div>

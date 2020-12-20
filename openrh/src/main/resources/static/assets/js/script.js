@@ -5,13 +5,11 @@ function imprimer(test) {
     window.print();
     document.body.innerHTML = originalContents;
 }
-$('document').ready(function () {
 
-    $('table #editButton').on('click',function (event) {
-        $('#editModal').modal();
-    });
-});
-
+function imprimer_page(){
+    document.getElementById('impression').hidden = true;
+    window.print();
+}
 
 (function(document) {
     'use strict';

@@ -17,7 +17,7 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/verify")
+    @PostMapping("/dashAdmin")
     String pageAppropriee(@ModelAttribute("users") Users users) {
         if (users.exist()) {
 
